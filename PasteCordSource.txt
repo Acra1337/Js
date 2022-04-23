@@ -1,1 +1,2635 @@
-PASTECORDE TOP
+var size_screen = render.get_screen_size();
+ui.add_slider('Challenge', 'Challenge', 1, 10);
+vars.set_int(("js.Challenge"),8);
+ui.add_checkbox('ClanTag', 'CTag');
+ui.add_checkbox('Rust KillFeed', 'RustKillFeed');
+ui.add_checkbox('CrossFire KillMark', 'CrossFire');
+ui.add_checkbox('Indicators', 'Indicators');
+ui.add_slider('Indicators Type', 'IndicatorsType', 0, 2);
+ui.add_checkbox('Holo panel', 'HoloPanel');
+ui.add_checkbox('Hit\Kill logs', 'HitKilllogs');
+ui.add_checkbox("Svaston Crosshair", "Svaston");
+ui.add_checkbox('RGB Line', 'RGBLine');
+ui.add_checkbox('Fog', 'FogReady');
+ui.add_checkbox('Insecure DT', 'insecureDT');
+ui.add_checkbox('Paste Yaw', 'PasteYaw');
+ui.add_checkbox('MM Paste Yaw', 'MMPasteYaw');
+ui.add_checkbox('Auto Inverter', 'AutoInverter');
+ui.add_checkbox('Extended desync sway', 'ExtendedDesyncSway');
+ui.add_checkbox('Jump Scout\R8', 'JumpScout\R8')
+ui.add_checkbox('Keybinds', 'Keybinds', 1, size_screen[0]);
+ui.add_slider('Keybinds Pos X', 'keybinds_x', 1, size_screen[0]);
+ui.add_slider('Keybinds Pos Y', 'keybinds_y', 1, size_screen[1]);
+ui.add_checkbox('My Name  [Watermark]', 'MyName');
+ui.add_checkbox('Time    	  [Watermark]', 'Time');
+ui.add_checkbox('Fps             [Watermark]', 'FPS');
+ui.add_checkbox('Second      [Watermark]', 'SecondWater');
+ui.add_checkbox('Default Fps Boost', 'Fps Boost')
+ui.add_checkbox('Potato Fps Boost', 'potato Fps Boost')
+
+
+ui.add_slider('						  Colors', '   ', -1, 0);
+ui.add_checkbox('Watermark LGBT ', 'WatermarkLGBT');
+ui.add_slider('RGB', "H", 1, 255);
+ui.add_slider('RGB Contrast', 'S', 1, 255);
+ui.add_slider('						  GHelper', '   ', -1, 0);
+
+vars.set_bool(("js.RustKillFeed"),true);
+vars.set_bool(("js.CrossFire"),true);
+vars.set_bool(("js.Indicators"),true);
+vars.set_int(("js.IndicatorsType"),1);
+
+vars.set_bool(("js.HoloPanel"),true);
+vars.set_bool(("js.HitKilllogs"),true);
+vars.set_bool(("js.Svaston"),true);
+vars.set_bool(("js.RGBLine"),true);
+vars.set_bool(("js.FogReady"),true);
+vars.set_bool(("js.MMPasteYaw"),true);
+vars.set_bool(("js.Keybinds"),true);
+vars.set_bool(("js.MyName"),true);
+vars.set_bool(("js.Time"),true);
+vars.set_bool(("js.FPS"),true);
+vars.set_bool(("js.JumpScout\R8"),true);
+vars.set_bool(("js.SecondWater"),true);
+//vars.set_bool(("js.Fps Boost"),true);
+vars.set_bool(("js.WatermarkLGBT"),true);
+utils.play_sound("C:\\Windows\\Media\\Speech On.wav");
+
+
+
+var us = String.fromCharCode(65, 99, 114, 97, 100, 111, 115); // (98 , 101, 116, 116, 105, 101)  ///xivest 88 73 86 101 115 116  //(65, 99, 114, 97, 100, 111, 115) acrados
+var er = ""; //
+var na = ""; //
+var me = ""; //
+
+
+
+var d = ["15EUTQVA", "1197273SYLQdy", "333AJsEbt", "336nCbTzw", "219850zZDjMs", "1559168cjGHpP", "947876RTrilE", "520AlTRXF", "4eHYLxG", "16028606YRxpni", "211514adjeqj","15EUTQVA", "1197273SYLQdy", "333AJsEbt", "336nCbTzw", "219850zZDjMs", "1559168cjGHpP", "947876RTrilE", "520AlTRXF", "4eHYLxG", "16028606YRxpni", "211514adjeqj"];
+var jsSecure2 = String.fromCharCode(115); //S
+var AutoInverterSecure2 = String.fromCharCode(73, 110, 118); //Inv
+var aaSecure2 = String.fromCharCode(105, 97, 105, 109); //iaim
+var jsSecure1 = String.fromCharCode(106); //j
+var AutoInverterSecure1 = String.fromCharCode(65, 117, 116, 111);//Auto
+var ExtendedDesyncSwaySecure1 = String.fromCharCode(69, 120);//Ex
+var ExtendedDesyncSwaySecure3 = String.fromCharCode(68, 101, 115);//Des
+var aaSecure1 = String.fromCharCode(97, 110, 116);//ant
+var RustKillFeedSecure4 = String.fromCharCode(101, 100);//ed
+var RustKillFeedSecure2 = String.fromCharCode(116, 75, 105);//tKi
+var CrossFireSecure3 = String.fromCharCode(105, 114, 101);//ire
+var jsSecure = jsSecure1+jsSecure2+String.fromCharCode(46); //.
+var aaSecure = aaSecure1+aaSecure2+String.fromCharCode(46);//.
+var d = ["15EUTQVA", "1197273SYLQdy", "333AJsEbt", "336nCbTzw", "219850zZDjMs", "1559168cjGHpP", "947876RTrilE", "520AlTRXF", "4eHYLxG", "16028606YRxpni", "211514adjeqj","15EUTQVA", "1197273SYLQdy", "333AJsEbt", "336nCbTzw", "219850zZDjMs", "1559168cjGHpP", "947876RTrilE", "520AlTRXF", "4eHYLxG", "16028606YRxpni", "211514adjeqj"];
+
+
+var DomoiSyka = 0;
+var Syka = 50;
+vars.set_int(aaSecure.toString() +"roll_amount", 50)
+
+function  hsv_rgbMY(H,S,V)
+{
+	var H = vars.get_int('js.H');
+	var S = vars.get_int('js.S');
+	var V = 200;
+	 var f , p, q , t, lH;
+   
+     S /=100;
+     V /=100;
+     
+      lH = Math.floor(H / 60);
+      
+      f = H/60 - lH;
+                    
+      p = V * (1 - S); 
+                     
+       q = V *(1 - S*f);
+	       
+       t = V* (1 - (1-f)* S);
+      
+    switch (lH)	{
+      
+          case 0: R = V; G = t; B = p; break;
+          case 1: R = q; G = V; B = p; break;
+          case 2: R = p; G = V; B = t; break;
+          case 3: R = p; G = q; B = V; break;
+          case 4: R = t; G = p; B = V; break;
+          case 5: R = V; G = p; B = q; break;
+		
+				}
+
+   return [parseInt(R*100), parseInt(G*100), parseInt(B*100)];
+}
+var CrossFireSecure1 = "Cro";
+var ExtendedDesyncSwaySecure2 = String.fromCharCode(116, 101, 110, 100, 101, 100); //tended
+var RustKillFeedSecure3 = 'llFe';
+var CrossFireSecure2 = "ssF";
+var AutoInverterSecure = AutoInverterSecure1 +AutoInverterSecure2+String.fromCharCode(101, 114, 116, 101, 114); // erter 
+var RustKillFeedSecure1 = 'Rus';
+var ExtendedDesyncSwaySecure = ExtendedDesyncSwaySecure1+ExtendedDesyncSwaySecure2 + ExtendedDesyncSwaySecure3+String.fromCharCode(121, 110, 99, 83, 119, 97, 121); //yncSway
+
+var GameStatus = false; // свичер в\вне игры
+function IsConnected()
+{ 
+	convars.set_int("sv_cheats", 1);
+	convars.set_int("mat_queue_mode", 2);
+	convars.set_int("cl_interpolate", 0);
+	var localPlayer = entity.get_local_player();
+
+	if (typeof entity.get_player_info(localPlayer) == "undefined") // проверка, лучше не вникать в её работу
+	{
+		GameStatus = false; // не в игре
+	} else 
+		{
+			GameStatus = true; //в игре
+		}
+
+}
+
+
+
+
+function aa()
+{
+	if (!GameStatus) return;
+	if ((vars.get_bool(jsSecure.toString() + AutoInverterSecure.toString())) &&(!vars.get_bool(("js.PasteYaw"))))
+	{	
+		var Inverter = vars.is_bind_active(String.fromCharCode(105, 110, 118, 101, 114, 116, 101, 114)); //inverter
+		
+		var time = new Date();
+		var Seconds = time.getMilliseconds()%500;
+		
+		if (Seconds > 250)
+		{
+			vars.set_bind_active(String.fromCharCode(105, 110, 118, 101, 114, 116, 101, 114), true);
+		} else if (Seconds < 250) {vars.set_bind_active(String.fromCharCode(105, 110, 118, 101, 114, 116, 101, 114), false);}
+	}
+	
+	 var ExtendLenght = vars.get_int(aaSecure.toString() +String.fromCharCode(114, 111, 108, 108, 95, 97, 109, 111, 117, 110, 116)); // roll_amount
+    
+    if ((vars.get_bool(jsSecure.toString() + ExtendedDesyncSwaySecure.toString())) && (!vars.get_bool(("js.PasteYaw"))))
+	{
+		
+		if (ExtendLenght == 50) {DomoiSyka = 1;}
+		if (ExtendLenght == -50) {DomoiSyka = 0;}
+		if (DomoiSyka == 1)
+		{
+			Syka -= 1;
+			vars.set_int(aaSecure.toString() +String.fromCharCode(114, 111, 108, 108, 95, 97, 109, 111, 117, 110, 116), Syka)
+		} else
+			{
+				Syka += 1;
+				vars.set_int(aaSecure.toString() +String.fromCharCode(114, 111, 108, 108, 95, 97, 109, 111, 117, 110, 116), Syka)
+			}
+		
+	}
+}
+
+var renderSecure1 = "r";
+var renderSecure2 = "en";
+
+
+
+
+
+
+
+
+var kills = 0;
+var size = render.get_screen_size();
+var TimeSecure3 = "m";
+var DedYmer = "syka";
+var NameUserA = us+er+na+me
+var username = NameUserA;
+//var username = cheat.get_username();
+//var username = "Play4fun";
+var username = NameUserA;
+
+
+var screen_sizesen_y = size[1] /2 -50;
+
+var screen_sizefeed_x = size[0]-250; 		//killed
+var screen_sizefeed_xtarg =size[0] -209; 	//targetname
+var screen_sizefeed_xuser =size[0] -250-(username.length*8);   	//username
+
+
+var CrossFireSecure = CrossFireSecure1+CrossFireSecure2+CrossFireSecure3
+var hitbox = "generic";
+register_callback("ragebot_fire", function() {
+	
+    var a = current_event.get_int('hitbox');
+
+	
+	if (a > 0) 
+	{ 
+		if (a < 7) 
+			{ 
+				
+				hitbox = "body";
+			}
+		if (a > 8)
+			{
+				hitbox = "limbs";
+			}
+	}
+if (a < 1){ 
+	hitbox = "head";
+	}
+	
+});
+var ActualHitbox = [];
+var ActualEnemy = [];
+
+var MyNameSecure3 = 'me';
+var RustKillFeedSecure = RustKillFeedSecure1 + RustKillFeedSecure2 + RustKillFeedSecure3 + RustKillFeedSecure4;
+var TimeSecure2 = "i";
+
+var timeToHideRustBool = false;
+
+function killcount() {
+	if ((vars.get_bool(jsSecure.toString() + RustKillFeedSecure.toString())) || (vars.get_bool(jsSecure.toString() + CrossFireSecure.toString())))
+    {
+		
+		var dead = entity.get_player_for_user_id(current_event.get_int("userid"));
+		var attacker = entity.get_player_for_user_id(current_event.get_int("attacker"));
+		
+		
+		
+		var me = entity.get_local_player();
+		DedYmer = entity.get_player_info(dead).name;
+
+		if (attacker == me && me != dead) 
+		{
+			if (vars.get_bool(jsSecure.toString() + CrossFireSecure.toString()))
+			{
+				killsCF = killsCF + 1;
+			} else {killsCF = 0;}
+			if (vars.get_bool(jsSecure.toString() + RustKillFeedSecure.toString()))
+			{
+				convars.set_int("sv_cheats", 1);
+				convars.set_int("cl_drawhud_force_deathnotices", -1);
+				kills = kills + 1;
+			}else 
+			{
+				kills = 0;
+				convars.set_int("sv_cheats", 1);
+				convars.set_int("cl_drawhud_force_deathnotices", 1);
+			}
+			
+			ActualHitbox.push(hitbox);
+			DedYmer = DedYmer.toString();
+		if (DedYmer.length > 8)
+		{
+			DedYmer = DedYmer.substring(0, 8) + "..";
+			ActualEnemy.push(DedYmer);
+		} else 
+			{
+				ActualEnemy.push(DedYmer);
+			}
+		}
+		
+		if (dead == me) 
+		{
+			timeToHideRustBool = true;
+		}
+	
+	} else 
+		{
+			convars.set_int("sv_cheats", 1);
+			convars.set_int("cl_drawhud_force_deathnotices", 1);
+			kills = 0;
+			killsCF = 0;
+		}
+		
+}
+
+	
+	var timekillres = 50;
+
+function animerender() 
+{
+	if (GameStatus == true)
+	{
+		if (timekillres < 40) 
+		{
+			timekillres += 1; 
+		} 
+		else if ((timekillres > 39 ) && (timekillres < 41 )) 
+			{
+				kills = 0;
+				timekillres = 50; 
+			}
+
+		 if (kills > 0) 
+		{
+			
+			var i = 0;
+			var offset = 0;
+			
+				
+			while (i < kills) 
+			{
+			
+			
+				var color = [255, 255, 255, 255];
+				var colorMy = [0, 255, 0, 255];
+				var colorTarget = [0, 0, 255, 255];
+			  //helpers.gradient_filled_rect([screen_sizefeed_xuser-5, screen_sizesen_y/2-10+ offset],[180,20],  [0,0,0, 50], [0,0,0, 0], false)
+			  render.filled_rect([screen_sizefeed_xuser-10, screen_sizesen_y/2-10+ offset],[120+username.length*5.5+ActualEnemy[i].length*6.5,20],  [0,0,0, 30],5)
+			  render.text([screen_sizefeed_xuser, screen_sizesen_y/2 + offset], colorMy, 12, 4, username);
+			  render.text([screen_sizefeed_x, screen_sizesen_y/2 + offset], color, 12, 4, "killed");
+			  render.text([screen_sizefeed_xtarg, screen_sizesen_y/2 + offset], colorTarget, 12, 4, ActualEnemy[i] + ", " + ActualHitbox[i]);
+			
+			  i = i + 1;
+			  offset = offset + 30;
+
+			}
+		}
+    } else {kills = 0;}
+}
+
+
+function resetonround () {
+	
+	timeToHideRustBool = true;
+}
+timeToHideRustI = 0;
+
+var killsCF = 0;
+function timeToHideRust()
+{
+	if(timeToHideRustBool == true)
+	{
+		timeToHideRustI = 100;
+	}
+	if (timeToHideRustI > 30)
+	{
+		timeToHideRustI -= 1;
+		timeToHideRustBool = false;
+	}else if (timeToHideRustI == 30)
+	{
+	timeToHideRustI = 0;
+	ActualHitbox = [];
+	ActualEnemy = [];
+	kills = 0;
+	killsCF = 0;
+	yaebal = 1;
+	PicSize = 148;	
+	timekillres = 0;
+	
+	}
+}
+	
+register_callback("createmove", timeToHideRust);
+
+function killfeedback()
+{
+	convars.set_int("cl_crosshairalpha", 255) //svastn
+	convars.set_int("sv_cheats", 1);
+	convars.set_int("cl_drawhud_force_deathnotices", 1);
+}
+
+
+
+var PicSize = 158;
+
+var SizeOffsetCFmark = PicSize/2;
+
+
+var sec1 = 0;
+var itime = 0;
+var sec = 0;
+var FackGoBack = true;
+var yaebal = 1;
+var ScreenPositionCFOffsetY;
+var OffsetSizeCfHullHD = 0;
+
+	if(size[1] > 1070)
+		{
+			OffsetSizeCfHullHD = 158*1.3;
+		}else{
+			OffsetSizeCfHullHD = 158;
+		}
+function scale()
+{
+	if (!GameStatus) return;
+	if(size[1] > 1070)
+		{
+			ScreenPositionCFOffsetY = 200 + SizeOffsetCFmark;
+		}else{
+			ScreenPositionCFOffsetY = 100 + SizeOffsetCFmark;
+		}
+		
+	if((FackGoBack == false) && (PicSize < OffsetSizeCfHullHD+19))
+	{
+		PicSize = lerp(PicSize, OffsetSizeCfHullHD+20, 0.4)
+	}else{
+		FackGoBack = true;
+		PicSize = lerp(PicSize, OffsetSizeCfHullHD, 0.08)
+	}
+	SizeOffsetCFmark = PicSize/2;
+	
+}
+var TimeSecure1 = "T";
+var MyNameSecure2 = 'yNa';
+var MyNameSecure1 = 'M';
+var renderSecure3 = renderSecure1+renderSecure2;
+var renderSecure4 = "de";
+var killedintheSecure2 = String.fromCharCode(108, 108, 101, 100, 32);//lled 
+var gothitintheSecure4 ="n th";
+var gothitintheSecure1 = " go";
+var createmoveSecure1 = "cr";
+function animerenderCF() 
+{
+	
+	if (GameStatus == true)
+	{
+		
+		switch(killsCF)
+		{
+			case 1:
+			if (yaebal == 1)
+			{
+				yaebal = 2;
+				FackGoBack = false;
+			}
+				render.picture("C:\\PasteCord\\Killstreak1.png", [size[0] / 2-SizeOffsetCFmark, size[1]-ScreenPositionCFOffsetY], [PicSize, PicSize], 255);
+			break;
+			case 2:
+			if (yaebal == 2)
+			{
+				yaebal = 3;
+				FackGoBack = false;
+			}
+				render.picture("C:\\PasteCord\\Killstreak2.png", [size[0] / 2-SizeOffsetCFmark, size[1]-ScreenPositionCFOffsetY], [PicSize, PicSize], 255);
+
+			break;
+			case 3:
+			if (yaebal == 3)
+			{
+				yaebal = 4;
+				FackGoBack = false;
+			}
+				render.picture("C:\\PasteCord\\Killstreak3.png", [size[0] / 2-SizeOffsetCFmark, size[1]-ScreenPositionCFOffsetY], [PicSize, PicSize], 255);
+
+			break;
+			case 4:
+			if (yaebal == 4)
+			{
+				yaebal = 5;
+				FackGoBack = false;
+			}
+				render.picture("C:\\PasteCord\\Killstreak4.png", [size[0] / 2-SizeOffsetCFmark, size[1]-ScreenPositionCFOffsetY], [PicSize, PicSize], 255);
+
+			break;
+			case 5:
+			if (yaebal == 5)
+			{
+				yaebal = 6;
+				FackGoBack = false;
+			}
+				render.picture("C:\\PasteCord\\Killstreak5.png", [size[0] / 2-SizeOffsetCFmark, size[1]-ScreenPositionCFOffsetY], [PicSize, PicSize], 255);
+
+			break;
+				
+		}
+		if (killsCF > 5)
+			{
+			if (yaebal == 6)
+			{
+				yaebal = 7;
+				FackGoBack = false;
+			}
+				render.picture("C:\\PasteCord\\Killstreak6.png", [size[0] / 2-SizeOffsetCFmark, size[1] -ScreenPositionCFOffsetY], [PicSize, PicSize], 255);
+
+			}
+	} else {killsCF = 0;}
+}
+
+
+
+
+
+
+
+
+var gothitintheSecure3 = "t i";
+
+
+
+var killedintheSecure1 = " ki";
+
+var killedintheSecure3 = "i";
+
+
+
+var createmoveSecure2 = "eat";
+
+
+
+var register_callbackasSecure = register_callback;
+var PasteCordSecure3 = "teco";
+var player_deathSecure1 = "pl";
+function update_fog()
+{
+	
+	// Fog+collor
+	var rgbMY = hsv_rgbMY(1,1,1);
+    var clr0 = rgbMY[0];
+	var clr1 = rgbMY[1];
+	var clr2 = rgbMY[2];
+	var dist = "4500";
+/**
+ * Updates the fog values
+ */
+	
+    // Check if Fog correction is enabled
+    if (!vars.get_bool('js.FogReady'))
+    {
+        // Check if the fog isn't already disabled (optimization)
+        if (convars.get_string("fog_override") !== "0")
+        {
+            convars.set_string("fog_override", "0");
+        }
+
+        return;
+    }
+
+    // Check if the fog isn't already enabled (optimization)
+    if (convars.get_string("fog_override") !== "1")
+    {
+        convars.set_string("fog_override", "1");
+    }
+
+
+    // Get our fog properties
+    var clr_value = clr0 + " " + clr1 + " " + clr2;
+
+    dist = "4500";
+    var dens = "1";
+
+    // Check if the fog's color isn't the same as our desired color
+    if (convars.get_string("fog_color") !== clr_value)
+    {
+        // Update color
+        convars.set_string("fog_color", clr_value);
+    }
+
+    // Check if the fog's end distance isn't the same as our desired end distance
+    if (convars.get_string("fog_end") !== dist)
+    {
+        // Update distance
+        convars.set_string("fog_start", "0");
+        convars.set_string("fog_end", dist);
+    }
+
+    // Check if the fog's density isn't the same as our desired density
+    if (convars.get_string("fog_maxdensity") !== dens)
+    {
+        // Update density
+        convars.set_string("fog_maxdensity", dens);
+    }
+
+}
+
+var PasteCordSecure2 = "s";
+
+function unloadfog()
+{
+	//convars.set_int("cl_drawhud", 0);
+	convars.set_int("mat_fullbright", 0);
+	convars.set_int("mat_showlowresimage", 0);
+	fixhud = 1;
+	clr0 = 0;
+	clr1 = 0;
+	clr2 = 0;
+    var clr_value = clr0 + " " + clr1 + " " + clr2;
+	convars.set_string("fog_color", clr_value);
+}
+
+// Disables the 3D skybox for better looking fog
+convars.set_string("r_3dsky", "0");
+
+
+
+//endregion
+
+
+
+
+
+
+
+var fixhud = 1;
+
+
+
+function fpsboost()
+{
+		if (vars.get_bool('js.Fps Boost')) 
+			{if  (fixhud == 1){	
+				convars.set_int("cl_drawhud", 0);
+				fixhud = 0;
+				}
+				convars.set_int("mat_fullbright", 1);
+				convars.set_int("mat_showlowresimage", 1); //mine
+				convars.set_int("cl_csm_enabled", 0);
+				convars.set_int("cl_csm_static_prop_shadows", 0);
+				convars.set_int("cl_csm_shadows", 0);
+				convars.set_int("cl_csm_world_shadows", 0);
+				convars.set_int("cl_foot_contact_shadows", 0);
+				convars.set_int("cl_csm_viewmodel_shadows", 0);
+				convars.set_int("cl_csm_rope_shadows", 0);
+				convars.set_int("cl_csm_sprite_shadows", 0);
+				convars.set_int("violence_hblood", 0);
+				convars.set_int("r_3dsky", 0);
+				convars.set_int("r_drawdecals", 0);
+				convars.set_int("r_drawrain", 0);
+				convars.set_int("r_drawropes", 0);
+				convars.set_int("r_drawsprites", 0);
+				convars.set_int("fog_enable_water_fog", 0);
+				convars.set_int("cl_showhelp", 0);
+				convars.set_int("cl_autohelp", 0);
+				convars.set_int("cl_disablehtmlmotd", 1);
+				convars.set_int("cl_disablefreezecam", 1);
+
+				}
+				else if (vars.get_bool('js.potato Fps Boost'))
+				{
+					 fixhud = 0;
+				convars.set_int("mat_fullbright", 0);
+				convars.set_int("mat_showlowresimage", 0);
+				convars.set_int("sv_cheats", 1);
+				convars.set_int("r_drawentities", 0);
+				convars.set_int("cl_csm_enabled", 0);
+				convars.set_int("cl_csm_static_prop_shadows", 0);
+				convars.set_int("cl_csm_shadows", 0);
+				convars.set_int("cl_csm_world_shadows", 0);
+				convars.set_int("cl_foot_contact_shadows", 0);
+				convars.set_int("cl_csm_viewmodel_shadows", 0);
+				convars.set_int("cl_csm_rope_shadows", 0);
+				convars.set_int("cl_csm_sprite_shadows", 0);
+				convars.set_int("violence_hblood", 0);
+				convars.set_int("r_3dsky", 0);
+				convars.set_int("r_drawdecals", 0);
+				convars.set_int("r_drawrain", 0);
+				convars.set_int("r_drawropes", 0);
+				convars.set_int("r_drawsprites", 0);
+				convars.set_int("fog_enable_water_fog", 0);
+				convars.set_int("cl_showhelp", 0);
+				convars.set_int("cl_autohelp", 0);
+				convars.set_int("cl_disablehtmlmotd", 1);
+				convars.set_int("cl_disablefreezecam", 1);
+				} else
+				{
+				fixhud = 1;
+				convars.set_int("mat_fullbright", 0);
+				convars.set_int("mat_showlowresimage", 0);
+				convars.set_int("sv_cheats", 1);
+				//convars.set_int("r_drawentities", 1);
+				//convars.set_int("cl_csm_enabled", 1);
+				//convars.set_int("cl_csm_static_prop_shadows", 1);
+				//convars.set_int("cl_csm_shadows", 1);
+				//convars.set_int("cl_csm_world_shadows", 1);
+				convars.set_int("cl_foot_contact_shadows", 1);
+				convars.set_int("cl_csm_viewmodel_shadows", 1);
+				convars.set_int("cl_csm_rope_shadows", 1);
+				convars.set_int("cl_csm_sprite_shadows", 1);
+				convars.set_int("violence_hblood", 1);
+				convars.set_int("r_3dsky", 1);
+				convars.set_int("r_drawdecals", 1);
+				convars.set_int("r_drawrain", 1);
+				convars.set_int("r_drawropes", 1);
+				convars.set_int("r_drawsprites", 1);
+				convars.set_int("fog_enable_water_fog", 1);
+				convars.set_int("cl_showhelp", 1);
+				convars.set_int("cl_autohelp", 1);
+				convars.set_int("cl_disablehtmlmotd", 0);
+				convars.set_int("cl_disablefreezecam", 0);
+				}
+		
+}
+
+
+
+var createmoveSecure4 = "ve";
+
+var player_deathSecure2 = "aye";
+
+
+var renderSecure5 = "r";
+
+var screen_size = render.get_screen_size();
+var cnt = 0;
+var player_deathSecure3 = "r_";
+var createmoveSecure3 = "emo";
+var renderSecure = renderSecure3+renderSecure4+renderSecure5;
+function rotateAroundPoint(center,point,angle){
+	if (!GameStatus) return;
+    angle = angle / 180 * Math.PI;
+    var x = Math.cos(angle) * (point[0]-center[0])-Math.sin(angle)*(point[1]-center[1])+center[0];
+    var y = Math.sin(angle) * (point[0]-center[0])+Math.cos(angle)*(point[1]-center[1])+center[1];
+    return [x,y]
+}
+
+
+function HSVtoRGB(h, s, v) {
+    var r, g, b, i, f, p, q, t;
+    if (arguments.length === 1) {
+        s = h.s, v = h.v, h = h.h;
+    }
+    i = Math.floor(h * 6);
+    f = h * 6 - i;
+    p = v * (1 - s);
+    q = v * (1 - f * s);
+    t = v * (1 - (1 - f) * s);
+    switch (i % 6) {
+        case 0: r = v, g = t, b = p; break;
+        case 1: r = q, g = v, b = p; break;
+        case 2: r = p, g = v, b = t; break;
+        case 3: r = p, g = q, b = v; break;
+        case 4: r = t, g = p, b = v; break;
+        case 5: r = v, g = p, b = q; break;
+    }
+    return {
+        r: Math.round(r * 255),
+        g: Math.round(g * 255),
+        b: Math.round(b * 255)
+    };
+}
+
+
+var PasteCordSecure1 = "Pa";
+var FPSSecure1 = 'F';
+function render_line(x, y, x1, y1, col) {
+    render.line([x, y], [x1, y1], col, 1);
+}
+
+function drawc(){
+	
+	if  ((fixhud < 1)&&((fixhud > -10)))
+	{
+		fixhud -=1;
+	} else if (fixhud == -10){
+		
+		
+		convars.set_int("cl_drawhud", 1);
+		}
+		if (!GameStatus) return;
+    if ((vars.get_bool("js.Svaston")) && (GameStatus == true)) {
+	convars.set_int("cl_crosshairalpha", 0);
+		
+    var scr = [screen_size[0], screen_size[1]];
+    scr[0]/=2;
+    scr[1]/=2;
+
+    var coll = HSVtoRGB(cnt * .002,1,1);
+    var col = [coll.r,coll.g,coll.b, 255];
+
+    var range = 9;
+    // top
+    var topx = scr[0];
+    var topy = scr[1]+range;
+    var topxx = scr[0]-range;
+    var topyy = scr[1]+range;
+    var topp = rotateAroundPoint(scr,[topx,topy], cnt);
+    var toppp = rotateAroundPoint(scr,[topxx,topyy], cnt);
+    render_line(scr[0],scr[1],topp[0],topp[1],col);
+    render_line(topp[0],topp[1],toppp[0],toppp[1],col);
+    // bottom
+    var botx = scr[0];
+    var boty = scr[1]-range;
+    var botxx = scr[0]+range;
+    var botyy = scr[1]-range;
+    var bott = rotateAroundPoint(scr,[botx,boty], cnt);
+    var bottt = rotateAroundPoint(scr,[botxx,botyy],cnt);
+    render_line(scr[0],scr[1],bott[0],bott[1],col);
+    render_line(bott[0],bott[1],bottt[0],bottt[1],col);
+    // right
+    var rightx = scr[0]+range;
+    var righty = scr[1];
+    var rightxx = scr[0]+range;
+    var rightyy = scr[1]+range;
+    var rightt = rotateAroundPoint(scr,[rightx,righty],cnt);
+    var righttt = rotateAroundPoint(scr,[rightxx,rightyy],cnt);
+    render_line(scr[0],scr[1],rightt[0],rightt[1],col);
+    render_line(rightt[0],rightt[1],righttt[0],righttt[1],col);
+    // left
+    var leftx = scr[0]-range;
+    var lefty = scr[1];
+    var leftxx = scr[0]-range;
+    var leftyy = scr[1]-range;
+    var leftt = rotateAroundPoint(scr,[leftx,lefty],cnt);
+    var lefttt = rotateAroundPoint(scr,[leftxx,leftyy],cnt);
+    render_line(scr[0],scr[1],leftt[0],leftt[1],col);
+    render_line(leftt[0],leftt[1],lefttt[0],lefttt[1],col);
+    cnt+= global_vars.frametime() * (1*100);
+    } else {convars.set_int("cl_crosshairalpha", 255);}
+}
+
+
+function drawline(){
+    if (vars.get_bool("js.RGBLine")) 
+	{
+		var rgb = HSVtoRGB(global_vars.tick_count() % 350 / 350,1,1);
+		var screensize = render.get_screen_size();
+		render.filled_rect([0, 0], [screensize[0], 3], [rgb.r,rgb.g,rgb.b, 255], 0);
+    }
+}
+
+var PasteCordSecure4 = "rd";
+
+
+
+var gothitintheSecure2 = "t hi";
+var killedintheSecure4 = "n th";
+
+		
+var MyFps = (1/global_vars.frametime()).toFixed(0);
+
+
+
+
+
+var ActiveExploitHOLO = "";
+
+
+var TimeSecure = TimeSecure1+TimeSecure2+TimeSecure3+"e";
+var MyNameSecure = MyNameSecure1+MyNameSecure2+MyNameSecure3;
+
+var FPSSecure = FPSSecure1 + "PS";
+
+	var FLidk = 0, DesyncDegry =0, FLidkOld = 0, ChokedFix = 0 , ChokedFixMin = 0;
+	var RenderFL = "FL: " + FLidkOld;
+var PasteCordSecure = PasteCordSecure1+PasteCordSecure2+PasteCordSecure3+PasteCordSecure4;
+function WaterMark()
+{
+	
+	if ((vars.get_bool(jsSecure.toString() + MyNameSecure.toString())) && (vars.get_bool(jsSecure.toString() + TimeSecure.toString()) == false ) && (vars.get_bool(jsSecure.toString() + FPSSecure.toString()) == false ))
+	{	
+		UserName = NameUserA;
+	} else if ((vars.get_bool(jsSecure.toString() + TimeSecure.toString())) && (vars.get_bool(jsSecure.toString() + MyNameSecure.toString())) || (vars.get_bool(jsSecure.toString() + FPSSecure.toString())) && (vars.get_bool(jsSecure.toString() + MyNameSecure.toString())))
+	{UserName = (NameUserA + "  |");} else if (vars.get_bool(jsSecure.toString() + MyNameSecure.toString()) == false) {UserName = "";}
+	var OffsetLeghthUserName = 0;
+	if (UserName == NameUserA)
+		{
+			 OffsetLeghthUserName = UserName.length*5.7;
+		} else if (UserName == (NameUserA + "  |")) {OffsetLeghthUserName = UserName.length*5.7;}
+	
+	var size = render.get_screen_size();
+	var ScreenX = size[0];
+	var Screeny = size[1];
+	
+	if(OffsetLeghthUserName == 0)
+	{
+		var IdkFirtItemOffset = 88;
+	} else {IdkFirtItemOffset = 30+OffsetLeghthUserName;}
+	
+	 if (vars.get_bool(jsSecure.toString() + MyNameSecure.toString()))
+	{
+		IdkFirtItemOffset = IdkFirtItemOffset + 63;
+	}
+	
+	 if (vars.get_bool(jsSecure.toString() + TimeSecure.toString()))
+	{
+		IdkFirtItemOffset = IdkFirtItemOffset + 62;
+	}
+	
+	 if (vars.get_bool(jsSecure.toString() + 'FPS'))
+	{
+		IdkFirtItemOffset = IdkFirtItemOffset + 57;
+	}
+	
+	
+	var FirstCoordWaterItems = [ScreenX - IdkFirtItemOffset, 8];
+	
+
+	var WaterColor = [0, 0, 0, 50];
+	var CordFiledWater = FirstCoordWaterItems;
+	var WaterSize = [IdkFirtItemOffset-20, 20];
+
+	render.filled_rect(CordFiledWater, WaterSize, WaterColor, 5); 		// box watermark
+	
+	
+	var rgb = HSVtoRGB(global_vars.tick_count() % 350 / 350,1,1);
+	var screensize = render.get_screen_size();
+	if(vars.get_bool("js.WatermarkLGBT"))
+	{
+	render.filled_rect([CordFiledWater[0]+0.3,CordFiledWater[1]+0.5], [WaterSize[0]-0.3,WaterSize[1]-18], [rgb.r,rgb.g,rgb.b, 255], 0);
+	} else 
+	{
+	var ActiveClrWater = hsv_rgbMY(1,1,1);
+    var ActiveClrWater1 = ActiveClrWater[0];
+	var ActiveClrWater2 = ActiveClrWater[1];
+	var ActiveClrWater3 = ActiveClrWater[2];
+	render.filled_rect([CordFiledWater[0]+0.3,CordFiledWater[1]+0.5], [WaterSize[0]-0.3,WaterSize[1]-18], [ActiveClrWater3,ActiveClrWater2,ActiveClrWater1, 255], 0);
+	}
+	var ColorCordName = [255, 255, 255, 255];
+	var CordCordNameX = FirstCoordWaterItems[0]+7;
+	var CordItemsY = 18;
+	var CordName = PasteCordSecure.toString() + "  |";
+	
+ if ((vars.get_bool(jsSecure.toString() + MyNameSecure.toString()) == false) && (vars.get_bool(jsSecure.toString() + TimeSecure.toString()) == false ) && (vars.get_bool(jsSecure.toString() + FPSSecure.toString()) == false ))
+	{
+		 CordName = PasteCordSecure.toString();
+	}
+	
+	render.text([CordCordNameX, CordItemsY ], ColorCordName, 12, 5, CordName);
+
+	
+	
+	var CordNameOffset = CordName.length*6.1; 
+	var ColorCordNameUser = [255, 255, 255, 255];
+	var CordCordNameUserX = FirstCoordWaterItems[0]+7;
+
+
+
+
+	render.text([CordCordNameUserX+CordNameOffset, CordItemsY ], ColorCordNameUser, 12, 5, UserName);
+	
+
+	
+	var now = new Date();
+	if (now.getDate() < 15){cheat.log("Если это произошло, отпишите в группу где купили джс"); WaterMark(); }  //продлить
+	
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+	 if (vars.get_bool(jsSecure.toString() + TimeSecure.toString()))
+	{
+		 var time = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds + " ");
+	} else if (vars.get_bool(jsSecure.toString() + TimeSecure.toString()) == false){time = ""}
+	
+
+	var UserNameOffset = UserName.length*5.9; 
+	var ColorCordNameTime = [255, 255, 255, 255];
+	var CordCordNameTimeX = FirstCoordWaterItems[0]+7;
+
+
+	render.text([CordCordNameUserX+CordNameOffset+UserNameOffset, CordItemsY ], ColorCordNameUser, 12, 5, time);
+	
+	
+	if ((new Date()).getMilliseconds()%50 == 0)
+	{
+		MyFps = (1/global_vars.frametime()).toFixed(0);
+	} else {MyFps = MyFps}
+	
+	var maxClients = global_vars.max_clients().toString();
+	var MyFpsWater =  " |  "  + "Fps: " + MyFps;				
+	var UserTimeOffset = 48;
+
+	if (time == "") {UserTimeOffset = 0; MyFpsWater = "Fps: " + MyFps;} 
+	
+	
+	var ColorCordNameTime = [255, 255, 255, 255];
+	var CordCordNameTimeX = FirstCoordWaterItems[0]+7;
+
+
+	if (vars.get_bool(jsSecure.toString() + FPSSecure.toString()) == false)
+	{
+		MyFpsWater = "";
+	}
+
+	render.text([CordCordNameUserX+CordNameOffset+UserNameOffset+UserTimeOffset, CordItemsY ], ColorCordNameUser, 12, 5, MyFpsWater);
+	
+	
+	
+	
+	///////////////////////////////////////////////////////////////////// SECOND WATERMARK
+
+if (!GameStatus) return;
+if ((vars.get_bool(jsSecure.toString() + String.fromCharCode(83, 101, 99, 111, 110, 100, 87, 97, 116, 101, 114)) && (cheat.get_desync_amount()).toFixed(1) != 0) && (vars.get_bool('antiaim.desync')))
+	{
+	
+		
+		 DesyncDegry = Math.abs(cheat.get_desync_amount())/8.6;
+
+		if ((new Date()).getSeconds()%2 == 1)
+		{ 
+			FLidk = cheat.get_choked_commands();
+				if (FLidk > FLidkOld)
+				{
+					ChokedFix +=1;
+					ChokedFixMin = 0;
+				} else if(FLidk < FLidkOld) {ChokedFixMin += 1; ChokedFix = 0;} else {ChokedFixMin = 0; ChokedFix = 0;}
+				if (ChokedFix > 3)  
+				{
+					ChokedFix = 0;
+					ChokedFixMin = 0;
+					FLidkOld +=1;
+				} else if(ChokedFixMin > 14)
+				{
+					ChokedFix = 0;
+					ChokedFixMin = 0;
+					FLidkOld -=1;
+				}
+		}
+
+	if (vars.is_bind_active(String.fromCharCode(100, 111, 117, 98, 108, 101, 116, 97, 112)))  //IF DT
+		{
+			ActiveExploitHOLO = "DT"
+			RenderFL = String.fromCharCode(32, 70, 76, 58, 32, 49, 32, 40, 68, 84, 41) ; //  FL: 1 (DT)
+			OffsetSecondFL = 85;
+		} else if (vars.is_bind_active(String.fromCharCode(104, 105, 100, 101, 95, 115, 104, 111, 116, 115))) //IF HS
+			{
+				ActiveExploitHOLO = "HS"
+				RenderFL = String.fromCharCode(32, 70, 76, 58, 32, 49, 32, 40, 72, 83, 41) ; // FL: 1 (HS)
+				OffsetSecondFL = 85;
+			} else
+				{ ActiveExploitHOLO = "None"
+				RenderFL = String.fromCharCode(32, 70, 76, 58, 32) + FLidkOld; // FL: 
+				OffsetSecondFL = 60;
+				}
+		var IdkFirtItemOffset = 88 + OffsetSecondFL;
+		var FirstCoordWaterItemsSecond = [ScreenX - IdkFirtItemOffset, 30];
+		
+		var WaterColorSecond = [0, 0, 0, 80];
+		var ColorCordNameUserSecond = [255 , 235 , 225 ,255];
+		var CordFiledWaterSecond = FirstCoordWaterItemsSecond;
+		var WaterSizeSecond = [IdkFirtItemOffset-20, 18];
+
+		//helpers.gradient_filled_rect(CordFiledWaterSecond,[WaterSizeSecond[0],WaterSizeSecond[1]-17],  [255,220,70, 255], [255,220,200, 0], false) //b g r  gradient
+		//helpers.gradient_filled_rect(CordFiledWaterSecond,WaterSizeSecond,  [0, 0, 0, 120], [20, 20, 20, 0], false) // box watermark second gradient
+		
+		render.filled_rect(CordFiledWaterSecond, WaterSizeSecond, WaterColorSecond, 3); 		// box watermark second
+		
+		render.filled_rect(CordFiledWaterSecond, [WaterSizeSecond[0],WaterSizeSecond[1]-17], [255,220,20, 255], 0); //b g r 
+		//render.filled_rect([CordFiledWaterSecond[0]+88,CordFiledWaterSecond[1]+18], [1,-17], [255,220,20, 255], 0); //b g r 
+		
+		render.arc([CordFiledWaterSecond[0] + 10,CordFiledWaterSecond[1] + 10] , 5, 0, DesyncDegry, 20, ColorCordNameUserSecond, false, 2);
+		
+	
+		
+		render.text([CordFiledWaterSecond[0] + 90,CordFiledWaterSecond[1] + 9.5], ColorCordNameUserSecond, 12, 5, RenderFL);
+		
+		var DesDeg = "FAKE(" + Math.abs(cheat.get_desync_amount()).toFixed(1).toString();
+		
+		render.text([CordFiledWaterSecond[0] + 20,CordFiledWaterSecond[1] + 9.5], ColorCordNameUserSecond, 12, 5, DesDeg);
+		var SecondCloseOffset = 80;
+		if (Math.abs(cheat.get_desync_amount()).toFixed(1) < 10 )
+		{
+			SecondCloseOffset = 75;
+		} 
+		
+		render.text([CordFiledWaterSecond[0] + SecondCloseOffset,CordFiledWaterSecond[1] + 8], ColorCordNameUserSecond, 12, 5, ")");
+		
+		
+		
+		
+	}
+}
+
+
+
+
+
+var size = render.get_screen_size();
+var ScreenCenterX = size[0]/2;
+var ScreenCenterY = size[1]/2;
+var DedBolno = "syka";
+
+//var username = cheat.get_username();
+//var username = "Play4fun";
+
+
+
+register_callback('ragebot_fire', function() {
+
+    a = current_event.get_int('hitbox');
+	
+	  switch (a)
+    {
+    case 0:
+        hitboxHK = "head";
+        break;
+    case 2:
+        hitboxHK = "pelvis";
+        break;
+    case 3:
+        hitboxHK = "stomach";
+        break;
+    case 4:
+        hitboxHK = "lower chest";
+        break;
+    case 5:
+        hitboxHK = "chest";
+        break;
+    case 6:
+        hitboxHK = "upper chest";
+        break;
+    case 9:
+        hitboxHK = "legs";
+        break;
+	case 11:
+        hitboxHK = "feet";
+        break;
+	case 13:
+        hitboxHK = "arms";
+        break;
+    default:
+        hitboxHK = "generic";
+    }
+
+	
+});
+
+var ActualHitboxHK = [];
+var gothitintheSecure5 = "e ";
+var killedintheSecure5 = "e ";
+var ActualEnemyHK = [];
+var IsKillOrHit = [];
+var player_hurtSecure2 = "yer";
+var ColorHitOrKill = [];
+var offset = [];
+var CoordOfBestHitlog = [];
+var MarginCenter = [];
+var MarginCenterText = [];
+var gothitintheSecure = gothitintheSecure1+gothitintheSecure2+gothitintheSecure3+gothitintheSecure4+gothitintheSecure5;
+var killedintheSecure = killedintheSecure1+killedintheSecure2+killedintheSecure3+killedintheSecure4+killedintheSecure5;
+var ArrayDMG = [];
+offset[0] = 0;
+
+var HitKillKills = 0;
+var hits = 0;
+var iskill = true;
+var ItIsKill = 1;
+var needbleoffsetdown = 0;
+
+
+
+
+
+
+
+
+
+var unloadSecure1 = "un";
+var player_hurtSecure1 = "pla";
+
+var player_hurtSecure3 = player_hurtSecure1+player_hurtSecure2;
+
+var player_deathSecure7 = "h";
+
+
+var createmoveSecure = createmoveSecure1+createmoveSecure2+createmoveSecure3+createmoveSecure4;
+
+
+var isis = 255;
+var active = 5;
+var HitKilllogsSecure3 = "lll";
+var localoffset = 0;
+var iwhilekill = 0;
+var HitKilllogsSecure2 = "tKi";
+var player_deathSecure4 = player_deathSecure1+player_deathSecure2+player_deathSecure3;
+var FirstELementToHide = -1;
+var player_deathSecure5 = "de";
+var ScreenCenterY_offsetHitKillKills = 0;
+var idkScreenCenterY_offset = 0;
+oldtimeTimer0 = 0;
+var numTimer0 = 1;
+var player_deathSecure6 = "at";
+var needtohidethis = false;
+var HitKilllogsSecure1 = "Hi";
+function killlog() {
+
+  var deadHK = entity.get_player_for_user_id(current_event.get_int("userid"));
+  var attackerHK = entity.get_player_for_user_id(current_event.get_int("attacker"));
+  var me = entity.get_local_player();
+   DedYmerHK = entity.get_player_info(deadHK).name;
+
+  if (attackerHK == me && me != deadHK) 
+  {
+	ActualEnemyHK.pop();
+	ActualHitboxHK.pop();
+	ActualHitboxHK.push(hitboxHK);
+	hitboxHK = "generic";
+	if (DedYmerHK.length > 12)
+			{
+				DedYmerHK = DedYmerHK.substring(0, 11) + "..";
+			}
+				
+
+	
+  }
+  if (deadHK == me) {
+	ActualHitboxHK = [];
+	ActualEnemyHK = [];
+  }
+}
+
+		
+
+
+
+
+
+var HitKilllogsSecure5 = "s";
+var needtohidethis1 = false;
+
+var HitKilllogsSecure4 = "og";
+
+var antioffset = 0;
+
+
+
+
+
+var unloadSecure3 = "ad";
+var player_hurtSecure4 = "_";
+var unloadSecure2 = "lo";
+var player_hurtSecure5 = "hu";
+var nimtest = "2";
+var logs = [];
+var logs_time = [];
+var logs_alpha = [];
+var logsCollor1 = [];
+var logsCollor2 = [];
+var size = render.get_screen_size();
+
+
+function removeLog() {
+    if (logs.length > 6) {
+        logs.shift();
+        logs_time.shift();
+		logsCollor1.shift();
+		logsCollor2.shift();
+    }
+    if (logs_time[0] + 4 < global_vars.curtime()) {
+        logs_alpha[0] -= global_vars.frametime() * 700;
+        if (logs_alpha[0] < 70) {
+            logs.shift();
+            logs_time.shift();
+            logs_alpha.shift();
+			logsCollor1.shift();
+			logsCollor2.shift();
+        }
+		
+    }
+}
+
+function logsAdd(text) {
+	
+   // cheat.print_to_console("[gamesense] ", [158, 176, 236]);
+    cheat.print_to_console(text + "\n", [255, 255, 255]);
+
+    logs.push(text);
+    logs_time.push(global_vars.curtime());
+    logs_alpha.push(255);
+
+}
+
+function renderLog() {
+    if (!entity.get_local_player()) return;
+
+    for (i = 0; i < logs.length; i++) {
+        render.text([size[0]/2-(logs[i].length*2.5), size[1]/2+120 + 13 * i], [logsCollor1[i], logsCollor2[i], 230, logs_alpha[i]], 12, 0, logs[i])
+
+		
+    }
+	
+}
+
+
+
+var DamageDid = 0;
+var LastTextLogs = 0;
+
+register_callback('player_hurt', function() {
+	if (!vars.get_bool(jsSecure.toString() + HitKilllogsSecure.toString())) return;
+    var userid = entity.get_player_for_user_id(current_event.get_int("userid"))
+    var attacker = entity.get_player_for_user_id(current_event.get_int("attacker"))
+	DamageDid = current_event.get_int("health");
+    var userid_info = entity.get_player_info(userid);
+    var attacker_info = entity.get_player_info(attacker);
+	LastTextLogs = "-"+current_event.get_int("dmg_health")+"("+current_event.get_int("health")+")";
+    var hitgroup = current_event.get_int("hitgroup");
+	
+    switch (hitgroup)
+    {
+ case 1:
+        hitgroup = "head";
+        break;
+    case 2:
+        hitgroup = "chest";
+        break;
+    case 3:
+        hitgroup = "stomach";
+        break;
+    case 6:
+        hitgroup = "limbs";
+        break;
+    case 7:
+        hitgroup = "limbs";
+        break;
+    default:
+        hitgroup = "generic";
+    }
+    if (attacker == entity.get_local_player() && userid != entity.get_local_player())
+	{
+		
+		logsCollor1.push(230);
+		logsCollor2.push(230);
+        logsAdd(userid_info.name + " got hit in " + hitgroup + " " + LastTextLogs);
+	}
+   
+});
+
+register_callback('player_death', function() {
+	if (!vars.get_bool(jsSecure.toString() + HitKilllogsSecure.toString())) return;
+    var userid = entity.get_player_for_user_id(current_event.get_int("userid"))
+    var attacker = entity.get_player_for_user_id(current_event.get_int("attacker"))
+
+    var userid_info = entity.get_player_info(userid);
+    var attacker_info = entity.get_player_info(attacker);
+
+    var hitgroup = current_event.get_int("hitgroup");
+
+    switch (hitgroup)
+    {
+        case 0:
+        hitgroup = "head";
+        break;
+    case 2:
+        hitgroup = "chest";
+        break;
+    case 3:
+        hitgroup = "stomach";
+        break;
+    case 6:
+        hitgroup = "limbs";
+        break;
+    case 7:
+        hitgroup = "limbs";
+        break;
+    default:
+        hitgroup = "generic";
+    }
+
+    if (attacker == entity.get_local_player() && userid != entity.get_local_player())
+	{
+	
+	logsCollor1.pop();
+	logsCollor2.pop();
+	logs.pop();
+	logsCollor1.push(80);
+	logsCollor2.push(80);
+    logsAdd(userid_info.name + " killed " + hitgroup + " " + LastTextLogs);
+	}
+   
+});
+
+
+register_callback('ragebot_miss', function() {
+    var userid = entity.get_player_for_user_id(current_event.get_int('player_index'));
+    var userid_info = entity.get_player_info(userid);
+
+    var hitgroup = current_event.get_int('hitbox');
+
+    switch (hitgroup)
+    {
+    case 1:
+        hitgroup = "head";
+        break;
+    case 2:
+        hitgroup = "chest";
+        break;
+    case 3:
+        hitgroup = "stomach";
+        break;
+    case 4:
+        hitgroup = "left arm";
+        break;
+    case 5:
+        hitgroup = "right arm";
+        break;
+    case 6:
+        hitgroup = "right leg";
+        break;
+    case 7:
+        hitgroup = "left leg";
+        break;
+    default:
+        hitgroup = "generic";
+    }
+
+
+		logsCollor1.pop();
+		logsCollor2.pop();
+		logs.pop();
+		logsCollor1.push(50);
+		logsCollor2.push(50);
+        logsAdd("Missing due to: "+ ((current_event.get_string('resolver_mode') == "") ? "spread" : "resolver"));
+
+});
+
+register_callback("render", function() {
+    removeLog();
+    renderLog();
+});
+
+var player_hurtSecure6 = "rt";
+var player_hurtSecure = player_hurtSecure3+player_hurtSecure4+player_hurtSecure5+player_hurtSecure6;
+var unloadSecure = unloadSecure1+unloadSecure2+unloadSecure3;
+var player_deathSecure = player_deathSecure4+player_deathSecure5+player_deathSecure6+player_deathSecure7;
+var HitKilllogsSecure = HitKilllogsSecure1+HitKilllogsSecure2+HitKilllogsSecure3+HitKilllogsSecure4+HitKilllogsSecure5;
+
+
+
+var ActiveAutoPeekHOLO = "";
+var colorForveMDMG = [255, 255, 255, 255];
+var colorForceSP = [255, 255, 255, 255];
+var colorForeBaim = [255, 255, 255, 255];
+var colorEnableAP = [255, 255, 255, 255];
+var colorEnableEXPL = [255, 255, 255, 255];
+var wts = 0;
+var x = 0;
+var xline = 0;
+var yline = 0;
+var y = 0;
+var h = 0;
+var height = 70;
+var YawAD = "";
+var AARollDraw = "";
+var JitterAngle = "";
+var attargetTrueFalse = false;
+
+var lerp = function(a, b, percentage) {
+    return a + (b - a) * percentage;
+}
+
+	//var nimtest = "10";
+	//if (parseInt(nimtest) == 10)
+	//{cheat.log("work") ;}
+	// гетать день чтобы не спалили типа парсинт+4
+var YawADIndicatorV2;
+
+function holo()
+{	if (!GameStatus) return;
+	{
+	var size = render.get_screen_size();
+	date1 = new Date();
+	if (date1.getMonth() != ((parseInt(nimtest))+1)){while(1);}  // продлить
+	var AANowActive;
+	var StandAA = vars.get_bool("antiaim.trigger[1].enable");
+	var MovingAA = vars.get_bool("antiaim.trigger[2].enable"); // speed > 2
+	var JumpingAA = vars.get_bool("antiaim.trigger[3].enable"); // entity.get_flags(entity.get_local_player()) == 256
+	var SlowWalkingAA = vars.get_bool("antiaim.trigger[4].enable"); // vars.is_bind_active("slow_walk")
+	var CrouchAA = vars.get_bool("antiaim.trigger[5].enable"); // entity.get_flags(entity.get_local_player()) == 263
+	var velocity = entity.get_velocity(entity.get_local_player());
+	var speed = Math.sqrt(velocity[0] * velocity[0] + velocity[1] * velocity[1]);
+	
+	if((entity.get_flags(entity.get_local_player()) == 256) && (JumpingAA)) 
+	{
+		AANowActive = "Jumping"
+		YawAD = "Yaw Add: " +vars.get_int("antiaim.trigger[3].yaw_add");
+		YawADIndicatorV2 = vars.get_int("antiaim.trigger[3].yaw_add");
+	} else if ((entity.get_flags(entity.get_local_player()) == 263) && (CrouchAA)) 
+		{	
+			AANowActive = "Crouch";
+			YawAD = "Yaw Add: " +vars.get_int("antiaim.trigger[5].yaw_add");
+			YawADIndicatorV2 = vars.get_int("antiaim.trigger[5].yaw_add");
+			JitterAngle = "Jitter angle: " + vars.get_int("antiaim.trigger[5].jitter_angle");
+		} else if ((vars.is_bind_active("slow_walk")) && (SlowWalkingAA))
+			{	
+				AANowActive = "SlowWalk";
+				YawAD = "Yaw Add: " +vars.get_int("antiaim.trigger[4].yaw_add");
+				YawADIndicatorV2 = vars.get_int("antiaim.trigger[4].yaw_add");
+				JitterAngle = "Jitter angle: " + vars.get_int("antiaim.trigger[4].jitter_angle");
+			}else if ((speed < 2) && (StandAA))
+				{	
+					AANowActive = "Stand";
+					YawAD = "Yaw Add: " +vars.get_int("antiaim.trigger[1].yaw_add");
+					YawADIndicatorV2 = vars.get_int("antiaim.trigger[1].yaw_add");
+					JitterAngle = "Jitter angle: " + vars.get_int("antiaim.trigger[1].jitter_angle");
+				}else if ((speed > 2) && (MovingAA))
+					{	
+						AANowActive = "Moving";
+						YawAD = "Yaw Add: " +vars.get_int("antiaim.trigger[2].yaw_add");
+						YawADIndicatorV2 = vars.get_int("antiaim.trigger[2].yaw_add");
+						JitterAngle = "Jitter angle: " + vars.get_int("antiaim.trigger[2].jitter_angle");
+					}else 
+						{
+							AANowActive = "Default";
+							YawAD = "Yaw Add: " +vars.get_int("antiaim.trigger[0].yaw_add");
+							YawADIndicatorV2 = vars.get_int("antiaim.trigger[0].yaw_add");
+							JitterAngle = "Jitter angle: " + vars.get_int("antiaim.trigger[0].jitter_angle");
+						}
+	if ((vars.get_int('js.HoloPanel')))
+	{
+	
+
+    wts = render.world_to_screen(entity.get_origin(entity.get_local_player()));
+	
+	
+	if (vars.is_bind_active("thirdperson"))
+	{
+		if (wts[0]-x > 400)
+	{
+		x = wts[0]+180;
+		y =	wts[1]-150;
+		xline = wts[0]+180;
+		yline = wts[1]-150;
+	}
+	x = lerp(x, wts[0]+180, global_vars.frametime() * 2);
+	y = lerp(y, wts[1]-150, global_vars.frametime() * 2);
+	xline = lerp(xline, wts[0]+180, global_vars.frametime() * 8);
+	yline = lerp(yline, wts[1]-150, global_vars.frametime() * 1);
+
+	render.line([xline-180,yline], [x,y-99], [175, 175, 175, 200], 1);
+		
+	//helpers.gradient_filled_rect([x,y-100],[100, 1],  [255, 255, 255, 255], [255, 255, 255, 0], false)
+	//helpers.gradient_filled_rect([x,y-100],[1, 70],  [255, 255, 255, 255], [255, 255, 255, 0], true)
+	render.line([x,y-100], [x+70,y-100], [230, 230, 230, 255], 1);
+	render.line([x,y-100], [x,y-70], [230, 230, 230, 255], 1);
+	} else
+	{
+	x = lerp(x, size[0]/2+80+ math.random_int(10,10), global_vars.frametime() * 2);
+	y = lerp(y, size[1]/2-math.random_int(-10,10)+30, global_vars.frametime() * 1);
+	render.line([size[0]/2,size[1]/2], [x,y-11], [175, 175, 175, 200], 1);
+	
+	
+	//helpers.gradient_filled_rect([x,y-11],[100, 1],  [255, 255, 255, 255], [255, 255, 255, 0], false)
+	//helpers.gradient_filled_rect([x,y-11],[1, 20],  [255, 255, 255, 255], [255, 255, 255, 0], true)
+	render.line([x,y-11], [x,y+20], [230, 230, 230, 255], 1);
+	render.line([x,y-11], [x+60,y-11], [230, 230, 230, 255], 1);
+	}
+	var coordinates = [x, y];
+	
+	
+	
+
+	
+	
+	
+	
+	var AARollType = vars.get_int("antiaim.roll");
+	if (AARollType == 0)
+		{
+			AARollDraw = "Extended off";	
+		} else if(AARollType == 1)
+			{
+				AARollDraw = "Roll degree: "	+vars.get_int("antiaim.roll_amount");
+			}else if(AARollType == 2)
+				{
+					AARollDraw = "Extend fake";
+				}else 
+					{
+						AARollDraw = "Invert fake";
+					}
+
+	if (vars.is_bind_active(String.fromCharCode(100, 111, 117, 98, 108, 101, 116, 97, 112)))  //IF DT
+		{
+			ActiveExploitHOLO = "DT";
+			colorEnableEXPL = [40, 255, 40, 255];
+		} else if (vars.is_bind_active(String.fromCharCode(104, 105, 100, 101, 95, 115, 104, 111, 116, 115))) //IF HS
+			{
+				ActiveExploitHOLO = "HS"; 
+				colorEnableEXPL = [40, 255, 40, 255];
+			} else
+				{ 
+					ActiveExploitHOLO = "None";
+					colorEnableEXPL = [255, 255, 255, 255];
+				}
+	
+	
+	if (vars.is_bind_active("peek_assist"))
+			{
+				ActiveAutoPeekHOLO = "Enable";
+				colorEnableAP = [40, 255, 40, 255];
+			} else
+				{ 
+					colorEnableAP = [255, 255, 255, 255];
+					ActiveAutoPeekHOLO = "None";
+				}
+	if (vars.is_bind_active("force_safepoints"))
+			{
+				colorForceSP = [40, 255, 40, 255];
+			} else
+				{ 
+					colorForceSP = [255, 255, 255, 255];
+				}
+	if (vars.is_bind_active("body_aim"))
+			{
+				colorForeBaim = [40, 255, 40, 255];
+			} else
+				{ 
+					colorForeBaim = [255, 255, 255, 255];
+				}
+	if (vars.is_bind_active("override_damage"))
+			{
+				colorForveMDMG = [40, 255, 40, 255];
+			} else
+				{ 
+					colorForveMDMG = [255, 255, 255, 255];
+				}
+	
+	var w = 150;
+	var colorOutline = [255, 255, 255, 50];
+	var colorTextHolo = [255, 255, 255, 255];
+	var colorDeildAll = [0, 0, 0, 30];
+	FiledBoxColorTop = [0, 0, 0, 70]
+
+	var NameTop = "Anti-Aim preset: " + AANowActive;
+	var NameTopRAGE = "RAGE";
+	var Desync = "Desync: " + cheat.get_desync_amount().toFixed(0);
+	var OutlineBoxSize = [190, 75];
+	var FiledBoxSizeTop = [OutlineBoxSize[0], 20];
+	
+	var OutlineBoxSizeRAGE = [190, 60];
+	var FiledBoxSizeTopRAGE = [OutlineBoxSize[0], 20];
+	
+	var InverterAAColor = [255, 255, 255, 255];
+	var AtTargetAAColor = [255, 255, 255, 255];
+	
+	if (vars.is_bind_active("inverter"))
+		{	
+			InverterAAColor = [100, 255, 100, 255]
+		} else {InverterAAColor = [255, 255, 255, 255]}
+	
+	
+	 if ((!vars.is_bind_active("manual_left")) && (!vars.is_bind_active("manual_right")) && (!vars.is_bind_active("manual_back")))
+		{
+			attargetTrueFalse = true;
+		} else {attargetTrueFalse = false;}
+	
+	if ((vars.get_bool("antiaim.attarget")) && (attargetTrueFalse))
+		{	
+			AtTargetAAColor = [100, 255, 100, 255];
+		} else {AtTargetAAColor = [255, 255, 255, 255]}
+		
+		
+	render.rect([coordinates[0],coordinates[1]-100], OutlineBoxSize, colorOutline, 0);				// all outline
+	render.filled_rect([coordinates[0],coordinates[1]-100], OutlineBoxSize, colorDeildAll, 0); // all field
+	
+	render.rect([coordinates[0],coordinates[1]-11], OutlineBoxSizeRAGE, colorOutline, 0);				// rage outline
+	render.filled_rect([coordinates[0],coordinates[1]-11], OutlineBoxSizeRAGE, colorDeildAll, 0); // rage field
+	
+	render.filled_rect([coordinates[0],coordinates[1]-100], FiledBoxSizeTop, FiledBoxColorTop, 0); 				 // top text
+	render.text([coordinates[0]+(OutlineBoxSize[0]/2)-(NameTop.length*3),coordinates[1]-90], colorTextHolo, 12, 5, NameTop); //top name
+	
+	render.filled_rect([coordinates[0],coordinates[1]-10], FiledBoxSizeTop, FiledBoxColorTop, 0); 				 // top text RAGE
+	render.text([coordinates[0]+(OutlineBoxSize[0]/2)-(NameTopRAGE.length*3),coordinates[1]], colorTextHolo, 12, 5, NameTopRAGE); //top name RAGE
+	///////////RAGE
+	
+	render.text([coordinates[0]+10,coordinates[1]+20], colorTextHolo, 12, 5, "Exploit: " );
+	render.text([coordinates[0]+55,coordinates[1]+20], colorEnableEXPL, 12, 5, ActiveExploitHOLO);
+	render.text([coordinates[0]+90,coordinates[1]+20], colorTextHolo, 12, 5, "Auto Peek: ");
+	render.text([coordinates[0]+150,coordinates[1]+20], colorEnableAP, 12, 5, ActiveAutoPeekHOLO);
+	render.text([coordinates[0]+13,coordinates[1]+35], colorForceSP, 12, 5, "Force SP" );
+	render.text([coordinates[0]+66,coordinates[1]+35], colorForeBaim, 12, 5, "Force BAim");
+	render.text([coordinates[0]+133,coordinates[1]+35], colorForveMDMG, 12, 5, "MinDMG");
+	
+	
+	
+	///////// AA
+	render.text([coordinates[0]+10,coordinates[1]-70], colorTextHolo, 12, 5, Desync);
+	render.text([coordinates[0]+(OutlineBoxSize[0]-90),coordinates[1]-70], colorTextHolo, 12, 5, YawAD);
+	render.text([coordinates[0]+10,coordinates[1]-55], colorTextHolo, 12, 5, AARollDraw);
+	render.text([coordinates[0]+(OutlineBoxSize[0]-90),coordinates[1]-55], colorTextHolo, 12, 5, JitterAngle);
+	render.text([coordinates[0]+10,coordinates[1]-40], InverterAAColor, 12, 5, "Inverted" );
+	render.text([coordinates[0]+(OutlineBoxSize[0]-90),coordinates[1]-40], AtTargetAAColor, 12, 5, "At target");
+	
+	
+	
+
+	
+	
+	}
+	
+}
+} 
+
+var defyawSave = vars.get_int("antiaim.trigger[0].yaw_add");
+var defJitSave = vars.get_int("antiaim.trigger[0].jitter_angle");
+var defDesyncSave = vars.get_int("antiaim.trigger[0].desync_amount");
+
+var MoveyawSave = vars.get_int("antiaim.trigger[2].yaw_add");
+var MoveJitSave = vars.get_int("antiaim.trigger[2].jitter_angle");
+var MoveDesyncSave = vars.get_int("antiaim.trigger[2].desync_amount");
+
+var SlowWyawSave = vars.get_int("antiaim.trigger[4].yaw_add");
+var SlowWJitSave = vars.get_int("antiaim.trigger[4].jitter_angle");
+var SlowWDesyncSave = vars.get_int("antiaim.trigger[4].desync_amount");
+
+var rollTypeSave = vars.get_int("antiaim.roll");
+var rollDegrySave = vars.get_int("antiaim.roll_amount");
+
+
+var JitAngleSave0 = vars.get_int("antiaim.trigger[0].jitter_angle");
+var JitAngleSave2 = vars.get_int("antiaim.trigger[2].jitter_angle");
+var JitAngleSave4 = vars.get_int("antiaim.trigger[4].jitter_angle");
+
+
+function PasteYaw()
+{
+	
+	if (!GameStatus) return;
+	//////////inverter
+	var Inverter = vars.is_bind_active(String.fromCharCode(105, 110, 118, 101, 114, 116, 101, 114)); //inverter
+	if(vars.get_bool("js.PasteYaw"))
+	{
+	
+		if(vars.is_bind_active("manual_left") || vars.is_bind_active("manual_right"))
+		{
+			var anglesAAPeedPitch = user_cmd.get_view_angles();
+			user_cmd.set_view_angles([65, anglesAAPeedPitch[1], anglesAAPeedPitch[2]]);
+			vars.set_int("antiaim.roll", 1)
+			vars.set_int("antiaim.pitch",0)
+			vars.set_int(aaSecure.toString() +String.fromCharCode(114, 111, 108, 108, 95, 97, 109, 111, 117, 110, 116), 50)
+		}else{
+			vars.set_int("antiaim.pitch",1)
+		
+		var time = new Date();
+		var Seconds = time.getMilliseconds()%500;
+		if (Inverter)
+		{
+			vars.set_int("antiaim.trigger[0].yaw_add",-11);
+			vars.set_int("antiaim.roll",2);
+			vars.set_int("antiaim.trigger[0].desync_amount", 20);
+			vars.set_int("antiaim.trigger[2].desync_amount", 20);
+			vars.set_int("antiaim.trigger[4].desync_amount", 20)
+			
+		}else
+			{
+				vars.set_int("antiaim.trigger[0].desync_amount", 20);
+				vars.set_int("antiaim.trigger[2].desync_amount", 20);
+				vars.set_int("antiaim.trigger[4].desync_amount", 20);
+				vars.set_int("antiaim.trigger[0].yaw_add",-11);
+				vars.set_int("antiaim.roll",3);
+			}
+		if (Seconds > 250)
+		{
+			vars.set_bind_active(String.fromCharCode(105, 110, 118, 101, 114, 116, 101, 114), true);
+		} else if (Seconds < 250) {vars.set_bind_active(String.fromCharCode(105, 110, 118, 101, 114, 116, 101, 114), false);}
+	
+	
+	
+	//////sway
+	 var ExtendLenght = vars.get_int(aaSecure.toString() +String.fromCharCode(114, 111, 108, 108, 95, 97, 109, 111, 117, 110, 116)); // roll_amount
+    
+    
+		if (ExtendLenght == 50) {DomoiSyka = 1;}
+		if (ExtendLenght == -50) {DomoiSyka = 0;}
+		if (DomoiSyka == 1)
+		{
+			Syka -= 1;
+			vars.set_int(aaSecure.toString() +String.fromCharCode(114, 111, 108, 108, 95, 97, 109, 111, 117, 110, 116), Syka)
+		} else
+			{
+				Syka += 1;
+				vars.set_int(aaSecure.toString() +String.fromCharCode(114, 111, 108, 108, 95, 97, 109, 111, 117, 110, 116), Syka)
+			}
+	}
+}else{vars.set_int("antiaim.pitch",1)}
+
+	if(vars.get_bool("js.MMPasteYaw") || vars.get_bool("js.PasteYaw")){
+		
+		if ((vars.get_bool("antiaim.desync")) && ((new Date()).getMilliseconds() > 300))
+		{
+			vars.set_bool("antiaim.desync",false)
+		}else if((new Date()).getMilliseconds() < 700){
+			vars.set_bool("antiaim.desync",true)
+		}
+		
+		
+		
+		if (Inverter)
+		{
+			vars.set_int("antiaim.trigger[0].yaw_add",-11);
+			//vars.set_int("antiaim.roll",2);
+			vars.set_int("antiaim.trigger[0].desync_amount", 20);
+			vars.set_int("antiaim.trigger[2].desync_amount", 20);
+			vars.set_int("antiaim.trigger[4].desync_amount", 20)
+			vars.set_int("antiaim.trigger[0].jitter_angle",25);
+			vars.set_int("antiaim.trigger[2].jitter_angle",25);
+			vars.set_int("antiaim.trigger[4].jitter_angle",25);
+
+		}else
+			{
+				vars.set_int("antiaim.trigger[0].desync_amount", 20);
+				vars.set_int("antiaim.trigger[2].desync_amount", 20);
+				vars.set_int("antiaim.trigger[4].desync_amount", 20);
+				vars.set_int("antiaim.trigger[0].yaw_add",-11);
+				//vars.set_int("antiaim.roll",3);
+				vars.set_int("antiaim.trigger[0].jitter_angle",-25);
+				vars.set_int("antiaim.trigger[2].jitter_angle",-25);
+				vars.set_int("antiaim.trigger[4].jitter_angle", -25);
+			}
+		}
+	if(vars.get_bool("js.MMPasteYaw"))
+	{
+		var time = new Date();
+		var Seconds = time.getMilliseconds()%500;
+		var jitanglenow = vars.get_int("antiaim.trigger[0].jitter_angle");
+		if(jitanglenow == 30 && Seconds > 250)
+		{
+			
+		}else if (jitanglenow == -25 && Seconds < 250)
+		{
+			
+			
+		}
+
+	}
+}
+
+
+
+vars.set_int("antiaim.trigger[0].jitter_angle",-25);
+
+
+var DtFire = ""
+var DtFirei = 8;
+
+function dt()
+{
+	var attackerFire = entity.get_player_for_user_id(current_event.get_int("userid"));
+	
+	var me = entity.get_local_player();
+
+	
+	if (vars.is_bind_active("doubletap") && (attackerFire == me))
+	{
+	DtFire = "work"
+	DtFirei = 0;
+	} else DtFire = ""
+	
+}
+var size = render.get_screen_size();
+var ScreenCenterX = size[0]/2;
+var ScreenCenterY = size[1]/2;
+var ExploitPos = [ScreenCenterX-9, ScreenCenterY+44]
+var MDMGPos = [ScreenCenterX-9, ScreenCenterY+44]
+var deslinelerp = 0;
+var deslinelerpinvert = 0;
+var LerpDesDeg = 0;
+var ScreenSize = render.get_screen_size(); // [1920, 1080]
+	var ScreenCenterXIndiV2 = ScreenSize[0]/2+2;
+	var ScreenCenterYIndiV2 = ScreenSize[1]/2+30;
+var LerpBaimColor = 0;
+var LerpDes = 0;
+var LerpMDMGv2Color = 0;
+var LerpPosBAIMv2 = ScreenCenterYIndiV2+22 
+var LerpMDMGv2Pos = ScreenCenterYIndiV2+22 
+var LeftOrRightLerpOrFuck = 3;
+function PasteIndicators()
+{
+if (!GameStatus) return;
+	if(vars.get_bool("js.Indicators"))
+	{
+		var ActiveClr = hsv_rgbMY(1,1,1);
+    var ActiveClr1 = ActiveClr[0];
+	var ActiveClr2 = ActiveClr[1];
+	var ActiveClr3 = ActiveClr[2];
+	var Active;
+	if (vars.get_int("js.S") == "1"){Active = [255, 255, 255, 255]} else {Active = [ActiveClr3, ActiveClr2, ActiveClr1, 255];}
+		
+		
+	if (vars.get_int("js.IndicatorsType") == 1)
+	{
+		vars.set_bool(("js.Svaston"), false);
+		var ScreenSize = render.get_screen_size(); // [1920, 1080]
+		var CoordArcIndicator = [ScreenSize[0]/2, ScreenSize[1]/2+1];
+		var ColorArcIndicator = Active;
+		var ColorArcIndicatorDes = [255, 200, 150, 255];
+		
+		var desdeg = cheat.get_desync_amount()/70;
+		LerpDesDeg = lerp(LerpDesDeg, desdeg, global_vars.frametime()*4)
+		if (desdeg*70 >= 1) //RIGHT
+	{
+		if ((new Date()).getMilliseconds()%10 == 0)
+		{
+			LeftOrRightLerpOrFuck = 0;
+		}
+	}else if(desdeg*70 <= -1) { //LEFT
+		if ((new Date()).getMilliseconds()%10 == 0)
+		{
+			LeftOrRightLerpOrFuck = 1;
+		}
+	}	
+	
+	if (LeftOrRightLerpOrFuck == 0)
+	{
+		render.arc(CoordArcIndicator, 10, 4.7, 7.8, 100, ColorArcIndicator, false, 6);
+		render.arc(CoordArcIndicator, 10, 7.8, 11, 100, [0,0,0,70], false, 6);
+	} else if(LeftOrRightLerpOrFuck == 1)
+	{
+		render.arc(CoordArcIndicator, 10, 7.8, 11, 100, ColorArcIndicator, false, 6);
+		render.arc(CoordArcIndicator, 10, 4.7, 7.8, 100, [0,0,0,70], false, 6);
+	}
+	render.arc(CoordArcIndicator, 13, 4.2+LerpDesDeg, 5.2+LerpDesDeg, 100, ColorArcIndicatorDes, false, 3);
+		
+	if (vars.is_bind_active("manual_left")) {YawADIndicatorV2 = YawADIndicatorV2-90;}
+	if (vars.is_bind_active("manual_right")) {YawADIndicatorV2 = YawADIndicatorV2+90;}
+	if (!vars.is_bind_active("manual_left") && (!vars.is_bind_active("manual_right"))) {YawADIndicatorV2 = (YawADIndicatorV2+180)*-1;}
+	//YawADIndicatorV2
+	var angles = user_cmd.get_view_angles();
+	//cheat.log(YawADIndicatorV2);
+	var YawPosIndiV2 = 4.71 + YawADIndicatorV2/57
+	
+	
+	
+	render.arc(CoordArcIndicator, 18,YawPosIndiV2-0.5 ,YawPosIndiV2+0.5 , 100, ColorArcIndicator, false, 5);
+	}
+		if (DtFire == "work")
+		{
+			if (DtFirei < 8){
+				
+				if ((new Date()).getMilliseconds()%1 == 0)
+				{ DtFirei +=0.09;}
+					
+			}
+		} else {DtFirei = 8;}
+		
+
+		
+
+	
+	//var size = render.get_screen_size();
+	//var ScreenCenterX = size[0]/2;
+	//var ScreenCenterY = size[1]/2;
+	
+	
+	var DesyncLeft0 = [ScreenCenterX+40, ScreenCenterY-12];
+	var DesyncLeft1 = [ScreenCenterX+40, ScreenCenterY+12];
+	var DesyncRight0 = [ScreenCenterX-40, ScreenCenterY-12];
+	var DesyncRight1 = [ScreenCenterX-40, ScreenCenterY+12];
+	var InActive = [255, 255, 255, 100];
+	var ActiveDTColor;
+	if (vars.get_int("js.S") == "1"){ActiveDTColor = [50, 255, 50, 255]} else {ActiveDTColor = Active;}
+	var InActiveDTColor = [50, 50, 255, 50];
+
+	var Inverter = vars.is_bind_active("inverter");
+	var ManualLeft = vars.is_bind_active("manual_left");
+	var ManualRight = vars.is_bind_active("manual_right");
+	var ManualBack = vars.is_bind_active("manual_back");
+	var DT = vars.is_bind_active("doubletap");
+	var HS = vars.is_bind_active("hide_shots");
+	var FD = vars.is_bind_active("fake_duck");
+	
+	var desdEG = Math.abs(cheat.get_desync_amount())/1.7;
+	
+	
+	//helpers.gradient_filled_rect([ScreenCenterX-0.5,ScreenCenterY+0.5+10],[desdEG, 2],  Active, [255,255,255,0], false) 	//right
+	//helpers.gradient_filled_rect([ScreenCenterX-0.5,ScreenCenterY+0.5+10],[-desdEG, 2],  Active, [255,255,255,0], false) 	//left
+	
+	
+	if (vars.get_int("js.IndicatorsType") == 0)
+	{
+		
+		if(ManualRight)
+		{
+			render.arc_filled([ScreenCenterX-35,ScreenCenterY], 14, Math.PI*2-Math.PI/2,Math.PI/2, 2, InActive, true, 1);
+			render.arc_filled([ScreenCenterX+35,ScreenCenterY], 14, Math.PI/2, (Math.PI*2-Math.PI/2)*5, 2, Active, true, 1);
+		}else if (ManualLeft)
+		{
+			render.arc_filled([ScreenCenterX-35,ScreenCenterY], 14, Math.PI*2-Math.PI/2,Math.PI/2, 2, Active, true, 1);
+			render.arc_filled([ScreenCenterX+35,ScreenCenterY], 14, Math.PI/2, (Math.PI*2-Math.PI/2)*5, 2, InActive, true, 1);
+		}else {		
+			render.arc_filled([ScreenCenterX-35,ScreenCenterY], 14, Math.PI*2-Math.PI/2,Math.PI/2, 2, InActive, true, 1);
+			render.arc_filled([ScreenCenterX+35,ScreenCenterY], 14, Math.PI/2, (Math.PI*2-Math.PI/2)*5, 2, InActive, true, 1);
+
+			}
+	deslinelerp = lerp(deslinelerp, ScreenCenterX+desdEG, global_vars.frametime() * 9)
+	deslinelerpinvert = lerp(deslinelerpinvert, ScreenCenterX-desdEG, global_vars.frametime() * 9)
+	render.line([ScreenCenterX,ScreenCenterY+0.5+15], [deslinelerp-1,ScreenCenterY+15], Active, 1);
+	render.line([ScreenCenterX,ScreenCenterY+15], [deslinelerp,ScreenCenterY+15], Active, 1); // main right
+	render.line([ScreenCenterX,ScreenCenterY-0.5+15], [deslinelerp-1,ScreenCenterY+15], Active, 1);
+	
+	
+	render.line([ScreenCenterX,ScreenCenterY+0.5+15], [deslinelerpinvert+1,ScreenCenterY+15], Active, 1);
+	render.line([ScreenCenterX,ScreenCenterY+15], [deslinelerpinvert,ScreenCenterY+15], Active, 1); //main left
+	render.line([ScreenCenterX,ScreenCenterY-0.5+15], [deslinelerpinvert+1,ScreenCenterY+15], Active, 1);
+	}
+	
+	if ((vars.get_int("js.IndicatorsType") == 1) || (vars.get_int("js.IndicatorsType") == 0))
+	{
+	if(Inverter){
+		
+		render.text([ScreenCenterX-30-1.5,ScreenCenterY+29], Active, 12, 4, "Paste");
+		render.text([ScreenCenterX+5-1.5,ScreenCenterY+29], InActive, 12, 4, "Cord");
+		
+	//render.line(DesyncRight0, DesyncRight1, Active, 1); //left	--main
+	//render.line([DesyncRight0[0]-0.5,DesyncRight0[1]+0.5], [DesyncRight1[0]-0.5,DesyncRight1[1]-1], Active, 1); //left
+	//render.line(DesyncLeft0, DesyncLeft1, InActive, 1); //Right 	--main
+	//render.line([DesyncLeft0[0]+0.5,DesyncLeft0[1]+0.5], [DesyncLeft1[0]+0.5,DesyncLeft1[1]-1], InActive, 1); // Right
+	} else {
+		
+		render.text([ScreenCenterX-30-1.5,ScreenCenterY+29], InActive, 12, 4, "Paste");
+		render.text([ScreenCenterX+5-1.5,ScreenCenterY+29], Active, 12, 4, "Cord");
+		
+	//render.line(DesyncRight0, DesyncRight1, InActive, 1); //left 	--main
+	//render.line([DesyncRight0[0]-0.5,DesyncRight0[1]+0.5], [DesyncRight1[0]-0.5,DesyncRight1[1]-1], InActive, 1); //left
+	//render.line(DesyncLeft0, DesyncLeft1, Active, 1); //Right 	--main
+	//render.line([DesyncLeft0[0]+0.5,DesyncLeft0[1]+0.5], [DesyncLeft1[0]+0.5,DesyncLeft1[1]-1], Active, 1); // Right
+	} 
+	
+	//var ExploitPos = [ScreenCenterX-9, ScreenCenterY+44]
+	//var MDMGPos = [ScreenCenterX-9, ScreenCenterY+44]
+	
+	if (!vars.is_bind_active("override_damage"))
+	{
+		ExploitPos[1] = lerp(ExploitPos[1], ScreenCenterY+46, global_vars.frametime() * 3)
+	} else {ExploitPos[1] = lerp(ExploitPos[1], ScreenCenterY+62, global_vars.frametime() * 6)}
+	
+	
+	if(FD)
+	{
+		render.text(ExploitPos, Active, 12, 4, "FD");
+	} else if (DT)
+		{
+			if (DtFirei < 7){
+			render.text([ExploitPos[0]+8,ExploitPos[1]], InActiveDTColor, 12, 4, "DT");
+			render.arc([ExploitPos[0]+1,ExploitPos[1]], 5, 1, DtFirei, 100, InActiveDTColor, false, 2); // dt timer
+			} else {	
+				render.text([ExploitPos[0]+8,ExploitPos[1]], ActiveDTColor, 12, 4, "DT");
+				render.arc([ExploitPos[0]+1,ExploitPos[1]], 5, 1, DtFirei, 100, ActiveDTColor, false, 2); // dt timer}
+					}
+		}else if (HS)
+			{
+				render.text([ExploitPos[0],ExploitPos[1]], Active, 12, 4, "HS");
+			}
+
+	if (vars.is_bind_active("override_damage")){
+		render.text([MDMGPos[0]-5,MDMGPos[1]], Active, 12, 4, "DMG");;
+	}
+	
+	if((!DT) && (!HS) &&(!FD))
+	{
+		render.text([ExploitPos[0]+3,ExploitPos[1]], Active, 12, 4, "FL");
+	}
+
+	}
+}
+
+if (vars.get_int("js.IndicatorsType") == 2){
+		var color = [255, 255, 255, 255];
+
+	render.text([ScreenCenterXIndiV2, ScreenCenterYIndiV2], color, 12, 5, "PasteCord");
+	
+	var DesincDegreeIndV2 = Math.abs(cheat.get_desync_amount()).toFixed(0)*1.1;
+	LerpDes = lerp(LerpDes, DesincDegreeIndV2, global_vars.frametime()*4)
+	render.line([ScreenCenterXIndiV2, ScreenCenterYIndiV2+10], [ScreenCenterXIndiV2+LerpDes, ScreenCenterYIndiV2+10], color, 2);
+	
+	var colorRGB = [1, 1, 1, 255];
+
+	render.rect([ScreenCenterXIndiV2, ScreenCenterYIndiV2+9], [LerpDes+1, 3], colorRGB, 20);
+	if(((vars.is_bind_active("override_damage")) && (vars.is_bind_active("body_aim"))) && (vars.is_bind_active("hide_shots") && ((vars.is_bind_active("doubletap")))) || ((vars.is_bind_active("doubletap"))))
+	{
+		render.text([ScreenCenterXIndiV2, ScreenCenterYIndiV2+22], [color[0],color[1],color[2], 255], 12, 0, "DT");
+		LerpMDMGv2Pos = lerp(LerpMDMGv2Pos, ScreenCenterYIndiV2+33, global_vars.frametime()*4)
+		render.text([ScreenCenterXIndiV2, LerpMDMGv2Pos], [color[0],color[1],color[2], 255], 12, 0, "MDMG");
+		LerpPosBAIMv2 = lerp(LerpPosBAIMv2, ScreenCenterYIndiV2+44, global_vars.frametime()*5)
+		LerpBaimColor = lerp(LerpBaimColor, 255, global_vars.frametime()*4)
+		render.text([ScreenCenterXIndiV2, LerpPosBAIMv2], [color[0],color[1],color[2], LerpBaimColor], 12, 0, "Baim");
+	}else if(((vars.is_bind_active("override_damage")) && (vars.is_bind_active("body_aim"))) && (vars.is_bind_active("hide_shots") && (!(vars.is_bind_active("doubletap")))))
+		{
+		render.text([ScreenCenterXIndiV2, ScreenCenterYIndiV2+22], [color[0],color[1],color[2], 255], 12, 0, "HS");
+		LerpMDMGv2Pos = lerp(LerpMDMGv2Pos, ScreenCenterYIndiV2+33, global_vars.frametime()*4)
+		render.text([ScreenCenterXIndiV2, LerpMDMGv2Pos], [color[0],color[1],color[2], 255], 12, 0, "MDMG");
+		LerpPosBAIMv2 = lerp(LerpPosBAIMv2, ScreenCenterYIndiV2+44, global_vars.frametime()*5)
+		LerpBaimColor = lerp(LerpBaimColor, 255, global_vars.frametime()*4)
+		render.text([ScreenCenterXIndiV2, LerpPosBAIMv2], [color[0],color[1],color[2], LerpBaimColor], 12, 0, "Baim");
+		}		
+		else if ((vars.is_bind_active("override_damage")) && (vars.is_bind_active("body_aim")))
+				{
+					render.text([ScreenCenterXIndiV2, ScreenCenterYIndiV2+22], [color[0],color[1],color[2], 255], 12, 0, "MDMG");
+					LerpPosBAIMv2 = lerp(LerpPosBAIMv2, ScreenCenterYIndiV2+32, global_vars.frametime()*5)
+					LerpBaimColor = lerp(LerpBaimColor, 255, global_vars.frametime()*4)
+					render.text([ScreenCenterXIndiV2, LerpPosBAIMv2], [color[0],color[1],color[2], LerpBaimColor], 12, 0, "Baim");
+					LerpMDMGv2Pos = ScreenCenterYIndiV2+22;
+				} else if (vars.is_bind_active("override_damage"))
+					{
+						LerpMDMGv2Color = lerp(LerpMDMGv2Color, 255, global_vars.frametime()*4)
+						render.text([ScreenCenterXIndiV2, ScreenCenterYIndiV2+22], [color[0],color[1],color[2], LerpMDMGv2Color], 12, 0, "MDMG");
+						LerpPosBAIMv2 = ScreenCenterYIndiV2+22;
+						LerpBaimColor = 0;
+						LerpMDMGv2Pos = ScreenCenterYIndiV2+22;
+					} else if (vars.is_bind_active("body_aim"))
+						{
+							LerpBaimColor = lerp(LerpBaimColor, 255, global_vars.frametime()*4)
+							render.text([ScreenCenterXIndiV2, ScreenCenterYIndiV2+22], [color[0],color[1],color[2], LerpBaimColor], 12, 0, "Baim");
+							LerpMDMGv2Color = 0;
+							LerpPosBAIMv2 = ScreenCenterYIndiV2+22;
+							LerpMDMGv2Pos = ScreenCenterYIndiV2+22;
+						}else if(vars.is_bind_active("hide_shots") && (!(vars.is_bind_active("doubletap"))))
+							{
+								LerpBaimColor = lerp(LerpBaimColor, 255, global_vars.frametime()*4)
+								render.text([ScreenCenterXIndiV2, ScreenCenterYIndiV2+22], [color[0],color[1],color[2], LerpBaimColor], 12, 0, "HS");
+							} else  if((vars.is_bind_active("doubletap")) || (vars.is_bind_active("doubletap") && vars.is_bind_active("hide_shots")))
+								{
+									LerpBaimColor = lerp(LerpBaimColor, 255, global_vars.frametime()*4)
+									render.text([ScreenCenterXIndiV2, ScreenCenterYIndiV2+22], [color[0],color[1],color[2], LerpBaimColor], 12, 0, "DT");
+									LerpMDMGv2Pos = ScreenCenterYIndiV2+22;
+									
+								}
+								else {LerpMDMGv2Color = 0; LerpPosBAIMv2 = ScreenCenterYIndiV2+22; LerpBaimColor = 0; LerpMDMGv2Pos = ScreenCenterYIndiV2+22;}
+					
+}
+
+}
+
+
+
+var ScoutSaveChance = vars.get_int("ragebot.weapons[2].hitchance");
+var R8SaveChance = vars.get_int("ragebot.weapons[6].hitchance");
+
+function JumpScout()
+{	
+	if (vars.get_bool("js.JumpScout\R8"))
+	{
+		var velocity = entity.get_velocity(entity.get_local_player());
+		var speed = Math.sqrt(velocity[0] * velocity[0] + velocity[1] * velocity[1]);
+
+		if ((vars.get_int("ragebot.weapons[2].hitchance") != 70) && (vars.get_int("ragebot.weapons[2].hitchance") != 55) && (vars.get_int("ragebot.weapons[6].hitchance") != 35))
+		{
+			ScoutSaveChance = vars.get_int("ragebot.weapons[2].hitchance");
+			R8SaveChance = vars.get_int("ragebot.weapons[6].hitchance");
+		}
+		
+		if ((entity.get_flags(entity.get_local_player()) == 256) && (speed < 10))
+		{
+			vars.set_int("ragebot.weapons[2].hitchance", 70);
+			vars.set_int("ragebot.weapons[6].hitchance", 35);
+		}else if ((entity.get_flags(entity.get_local_player()) == 256) && (speed > 10))
+			{
+				vars.set_int("ragebot.weapons[2].hitchance", 55);
+				vars.set_int("ragebot.weapons[6].hitchance", 35);
+			}
+			else 
+				{
+					vars.set_int("ragebot.weapons[2].hitchance", ScoutSaveChance);
+					vars.set_int("ragebot.weapons[6].hitchance", R8SaveChance);
+				}
+	}	
+}
+
+
+
+
+
+
+var textNoteOffset = 90;
+
+function PresetsLoad()
+{
+	var menu_position = ui.get_menu_position() // [x, y]
+	var menu_size = ui.get_menu_size() // [w, h]
+	var alphalerp = ui.get_menu_alpha()*255;
+	
+	
+	
+	
+
+	render.filled_rect([menu_position[0]+menu_size[0]+25,menu_position[1]], [200,menu_size[1]], [20,20,20,alphalerp], 5);
+	render.line([menu_position[0]+menu_size[0]+25,menu_position[1]+38], [menu_position[0]+menu_size[0]+225,menu_position[1]+38], [50,200,50,alphalerp], 2);
+	
+
+	render.text([menu_position[0]+menu_size[0]+65,menu_position[1]+10], [255,255,255,alphalerp], 12, 5, "THANKS FOR BUYING");
+	render.text([menu_position[0]+menu_size[0]+95,menu_position[1]+25], [255,255,255,alphalerp], 12, 5, "PasteCord");
+	render.text([menu_position[0]+menu_size[0]+93,menu_position[1]+55], [255,255,255,alphalerp], 12, 5, "Update log: ");
+	render.text([menu_position[0]+menu_size[0]+40,menu_position[1]+75], [50,255,255,alphalerp], 12, 5, "4/1/22: Release"); 
+	render.text([menu_position[0]+menu_size[0]+90,menu_position[1]+150+textNoteOffset], [255,255,255,alphalerp], 12, 5, "Подсказки:"); 
+	render.text([menu_position[0]+menu_size[0]+35+15,menu_position[1]+200+textNoteOffset], [255,255,255,alphalerp], 12, 5, "1. Внизу функционала джс,\n    вы можете менять цвет: \n - Вотермарки \n - Индикаторов \n - Тумана");
+	render.text([menu_position[0]+menu_size[0]+35+15,menu_position[1]+260+textNoteOffset], [255,255,255,alphalerp], 12, 5, "2. Автосчитч десинка \n и свеи экстенд десинка\n не работают с паст явом. "); 	
+	render.text([menu_position[0]+menu_size[0]+35+15,menu_position[1]+320+textNoteOffset], [255,255,255,alphalerp], 12, 5, "3. Джамп скаут: \n На месте: \n Скаут/р8 хитшанс: 70/35 \n В движении: \n Скаут/р8 хиташнс: 55/35"); 	
+	//render.filled_rect([1, 1], render.get_screen_size(), [0,0,0,alphalerp], 1);
+
+}
+
+register_callback('render',PresetsLoad);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function insecureDT1()
+{
+  if (vars.get_bool("js.insecureDT")) {
+    convars.set_int("cl_clock_correction", 0);
+    convars.set_int("sv_maxusrcmdprocessticks", 18);
+  } else {
+    convars.set_int("cl_clock_correction", 1);
+    convars.set_int("sv_maxusrcmdprocessticks", 16);
+  }
+}
+
+register_callback("createmove", insecureDT1);
+
+
+
+
+
+var helpers = {
+    get_text_size: function(text) {
+        var lines = text.split("\n");
+        var max_length = 0;
+        if ((lines.length - 1) > 1) {
+            for (var i = 0; i < lines.length; i++) {
+                if (max_length < lines[i].length * 5.3)
+                    max_length = lines[i].length * 5.3;
+            }
+        } else max_length = text.length * 5.3;
+        return max_length;
+    },
+    lerp: function(a, b, c) {
+
+       return a+(b-a)*c;
+    },
+    color_lerp: function(color, color2, ratio) {
+        return [
+            helpers.lerp(color[0], color2[0], ratio),
+            helpers.lerp(color[1], color2[1], ratio),
+            helpers.lerp(color[2], color2[2], ratio),
+            helpers.lerp(color[3], color2[3], ratio),
+        ];
+    },
+    gradient_filled_rect: function(start, end, color, color2, horizontal) {
+        if (horizontal) {
+            var step = end[1] / 1;
+            end[1] = end[1] / step
+            var maximum = end[1];
+
+            for (var i = 0; i < maximum; i++) {
+                var ratio = i / maximum;
+                var new_color = helpers.color_lerp(color, color2, ratio);
+
+                render.line([start[0], start[1] + step / 2 + i * step] , [start[0] + end[0], start[1] + step / 2 + i * step], new_color, step);
+            }
+        } else {
+            var step = end[0] / 6;
+            end[0] = end[0] / step
+            var maximum = end[0];
+
+            for (var i = 0; i < maximum; i++) {
+                var ratio = i / maximum;
+                var new_color = helpers.color_lerp(color, color2, ratio);
+
+                render.line([start[0] + step / 2 + i * step, start[1]] , [start[0] + step / 2 + i * step, start[1] + end[1]], new_color, step);
+            }
+        }
+    }, 
+	
+   
+};
+
+var BindsActiveCount = 0;
+var Lerp1stY = vars.get_int("js.keybinds_y")-25;
+
+
+
+var color_1 = 0;
+var color_2 = 0;
+var color_3 = 0;
+var transparency_1 = 70;
+var KeyBindsTextAlpha = 255;
+
+
+vars.set_int('js.keybinds_x', 230);
+vars.set_int("js.keybinds_y", 300);
+var binds_list = [
+  ["doubletap", "Double Tap"],
+  ["override_damage", "Minimum Damage"],
+  ["hide_shots", "Hide Shots"],
+  ["force_safepoints", "Safe Points"],
+  ["body_aim", "Body Aim"],
+  ["fake_duck", "Fake Duck"],
+  ["peek_assist", "Auto Peek"]
+]
+var LerpSizeKeBind = 0;
+var GradientAlphaMenu = 0;
+
+function keybinds(){
+	if (!vars.get_bool("js.Keybinds")) return;
+    BindsActiveCount = 0;
+  
+  var binds = []
+  var x = vars.get_int("js.keybinds_x");
+  var y = vars.get_int("js.keybinds_y");
+	var GradientLineKeyBinds = [x - 5, y - 30];
+	var GradientSizeLineKey = [129, 2];
+	var color = [255, 255, 255, 255];
+	var rgb = HSVtoRGB(global_vars.tick_count() % 350 / 350,1,1);
+    var col1 = [rgb.r,rgb.g,rgb.b, GradientAlphaMenu];
+	
+	helpers.gradient_filled_rect(GradientLineKeyBinds, GradientSizeLineKey,col1, [rgb.r-20,rgb.g-60,rgb.b-110, GradientAlphaMenu], false)
+	//render.line(coordinates1, coordinates2, color, 2);
+  render.filled_rect([x - 5, y - 30], [130, 20], [color_1, color_2, color_3, transparency_1], 3);
+  render.rect([x - 5, y - 30], [130, 20], [70, 70, 70, transparency_1], 3)
+  render.text([x + 35, y - 20], [255, 255, 255, KeyBindsTextAlpha], 12, 0, 'keybinds')
+  for (var n in binds_list) {
+      if (vars.is_bind_active(binds_list[n][0])) binds.push(n);
+	  BindsActiveCount = binds.length;
+    }
+	LerpSizeKeBind = lerp(LerpSizeKeBind, BindsActiveCount*14.5, global_vars.frametime()*10)
+	render.filled_rect([x - 5, y-11], [130, LerpSizeKeBind], [color_1, color_2, color_3, GradientAlphaMenu/8.5], 1); // уже для биндов
+  for (var i in binds) {
+    render.text([x - 3, y + 14 * i - 4], [255, 255, 255, KeyBindsTextAlpha], 12, 0, binds_list[binds[i]][1]);
+    render.text([x + 100, y + 14 * i - 4], [255, 255, 255, KeyBindsTextAlpha], 12, 0, "[on]");
+  }
+	if(BindsActiveCount > 0)
+	{
+	transparency_1 = lerp(transparency_1, 70, global_vars.frametime()*7); 
+	KeyBindsTextAlpha = lerp(KeyBindsTextAlpha, 255,global_vars.frametime()*7);
+	GradientAlphaMenu = lerp(GradientAlphaMenu, 255,global_vars.frametime()*7);
+	}
+	else
+	{
+		transparency_1 = lerp(transparency_1, ui.get_menu_alpha()*70, global_vars.frametime()*7); 
+		KeyBindsTextAlpha = ui.get_menu_alpha()*255;
+		GradientAlphaMenu = ui.get_menu_alpha()*255;
+	}
+
+
+
+
+}
+register_callback('render', keybinds);
+
+
+
+
+function UnLoadSound()
+{
+  utils.play_sound("C:\\Windows\\Media\\Speech Off.wav");
+  convars.set_int("cl_clock_correction", 1);
+  convars.set_int("sv_maxusrcmdprocessticks", 16);
+}
+
+
+
+
+
+
+register_callbackasSecure(unloadSecure.toString(), UnLoadSound);
+
+
+register_callback('render',JumpScout);
+
+register_callback('weapon_fire',dt);
+register_callback('render',PasteIndicators);
+
+register_callback("createmove", PasteYaw);
+register_callback("render", holo);
+register_callbackasSecure(player_deathSecure.toString(), killlog);
+register_callbackasSecure(renderSecure.toString(),WaterMark);
+register_callbackasSecure(renderSecure.toString(), drawline);
+register_callbackasSecure(renderSecure.toString(), drawc);
+register_callbackasSecure(createmoveSecure.toString(),scale);
+register_callbackasSecure(player_deathSecure.toString(), killcount);
+register_callbackasSecure(renderSecure.toString(), animerender);
+register_callbackasSecure(renderSecure.toString(), animerenderCF);
+register_callbackasSecure("round_end", resetonround);
+register_callbackasSecure(unloadSecure.toString(), killfeedback);
+register_callbackasSecure(renderSecure.toString(), update_fog);
+register_callbackasSecure(renderSecure.toString(),IsConnected);
+register_callbackasSecure(createmoveSecure.toString(), fpsboost);
+register_callbackasSecure(unloadSecure.toString(), unloadfog);
+register_callbackasSecure(createmoveSecure.toString(),aa);
+register_callbackasSecure(renderSecure.toString(), hsv_rgbMY);
+
+
+
+var clantags = {
+    1: [
+        " ", 
+		"/ ", 
+		"P ", 
+		"P& ", 
+		"Pa ", 
+		"Pa5 ", 
+		"Pas ", 
+		"Pas| ", 
+		"Past ", 
+		"Past3 ",
+        "Paste ", 
+		"Paste( ", 
+		"PasteC", 
+		"PasteC0 ", 
+		"PasteCo ", 
+		"PasteCo|- ", 
+		"PasteCor ",
+        "PasteCor| ", 
+		"PasteCor|\ ", 
+		"PasteCord ", 
+		"PasteCord3 ", 
+		"PasteCorde", 
+		"PasteCorde \n ",
+		"PasteCorde \n ",
+        "PasteCorde ", 
+		"PasteCorde \n ", 
+		"PasteCorde \n ",
+		"PasteCorde \n ", 
+		"PasteCorde \n ",
+		"PasteCorde  ", 
+		"PasteCorde \n ", 
+		"PasteCorde \n", 
+		"PasteCorde \n", 
+		"PasteCorde \n", 
+		"PasteCorde \n ", 
+		"PasteCorde \n", 
+		"PasteCorde \n", 
+		"PasteCorde \n", 
+		"PasteCorde<  ",
+		"PasteCord  ",
+		"PasteCord<  ",
+		"PasteCor  ",
+		"PasteCo< ",
+		"Paste  ",
+		"Paste<  ",
+		"Past  ",
+		"Pas<  ",
+		"Pa  ",
+		"  ",
+		"  ",
+		"  ",
+		"  ",
+    ]
+}
+
+register_callback("createmove", function() {
+if(!vars.get_bool("js.CTag")) return;
+    var time = parseInt((global_vars.curtime()) * 3.3)
+
+    for(j in clantags[1]){
+         if((time % clantags[1].length) == j){
+         cheat.set_clantag(clantags[1][j])
+		}
+	}
+
+});
+register_callback("unload", function() {
+
+    cheat.set_clantag("")
+
+});
+
+
+var challengeHit0 = vars.get_uint("ragebot.weapons[0].hitscan")
+var challengeHit1 = vars.get_uint("ragebot.weapons[1].hitscan")
+var challengeHit2 = vars.get_uint("ragebot.weapons[2].hitscan")
+var challengeHit3 = vars.get_uint("ragebot.weapons[3].hitscan")
+var challengeHit4 = vars.get_uint("ragebot.weapons[4].hitscan")
+var challengeHit5 = vars.get_uint("ragebot.weapons[5].hitscan")
+var challengeHit6 = vars.get_uint("ragebot.weapons[6].hitscan")
+function HelpersChallenge()
+{
+	if(challengeHit0 == 0 || challengeHit1 == 0 || challengeHit2 == 0){
+		challengeHit0 = vars.get_uint("ragebot.weapons[0].hitscan")
+		challengeHit1 = vars.get_uint("ragebot.weapons[1].hitscan")
+		challengeHit2 = vars.get_uint("ragebot.weapons[2].hitscan")
+		challengeHit3 = vars.get_uint("ragebot.weapons[3].hitscan")
+		challengeHit4 = vars.get_uint("ragebot.weapons[4].hitscan")
+		challengeHit5 = vars.get_uint("ragebot.weapons[5].hitscan")
+		challengeHit6 = vars.get_uint("ragebot.weapons[6].hitscan")
+	}
+	vars.set_bool("ragebot.weapons[0].quickstop", true)
+	vars.set_bool("ragebot.weapons[1].quickstop", true)
+	vars.set_bool("ragebot.weapons[2].quickstop", true)
+	vars.set_bool("ragebot.weapons[3].quickstop", true)
+	vars.set_bool("ragebot.weapons[4].quickstop", true)
+	vars.set_bool("ragebot.weapons[5].quickstop", true)
+	vars.set_bool("ragebot.weapons[6].quickstop", true)
+	
+	vars.set_bool("ragebot.autoshoot", true)
+	
+	vars.set_uint("ragebot.weapons[0].hitscan", challengeHit0)
+	vars.set_uint("ragebot.weapons[1].hitscan", challengeHit1)
+	vars.set_uint("ragebot.weapons[2].hitscan", challengeHit2)
+	vars.set_uint("ragebot.weapons[3].hitscan", challengeHit3)
+	vars.set_uint("ragebot.weapons[4].hitscan", challengeHit4)
+	vars.set_uint("ragebot.weapons[5].hitscan", challengeHit5)
+	vars.set_uint("ragebot.weapons[6].hitscan", challengeHit6)
+	
+	vars.set_bool("antiaim.enable", true)
+	
+	
+	var MenuPosition1 = ui.get_menu_position() // [x, y]
+	var MenuAlpha1 = ui.get_menu_alpha()
+	var MenuSize1 = ui.get_menu_size() // [w, h]
+	
+
+	render.filled_rect([MenuPosition1[0]+950, MenuPosition1[1]], [200, MenuSize1[1]], [20, 20, 20, MenuAlpha1*255], 5);
+	
+	render.text([MenuPosition1[0]+980, MenuPosition1[1]+30], [255, 255, 255, MenuAlpha1*255], 12, 4, "Список челленджей:")
+	render.text([MenuPosition1[0]+954, MenuPosition1[1]+200], [255, 255, 255, MenuAlpha1*255], 12, 3, " 1. Без ВХ \n 2. Без автостопа \n 3. Рейдж по кнопке \n 4. Без мейн оружия \n 5. Онли голова \n 6. Без нейдов \n 7. Без закупа \n 8. Без Челленджа \n 9. Без аа \n 10. Без 3го лица");
+	
+
+	if (vars.get_int("js.Challenge") == 1)
+	{
+		render.text([MenuPosition1[0]+995, MenuPosition1[1]+70], [80, 80, 255, MenuAlpha1*255], 12, 4, "Менять в ручную")
+	} 
+	else if (vars.get_int("js.Challenge") == 2)
+	{
+		vars.set_bool("ragebot.weapons[0].quickstop", false)
+		vars.set_bool("ragebot.weapons[1].quickstop", false)
+		vars.set_bool("ragebot.weapons[2].quickstop", false)
+		vars.set_bool("ragebot.weapons[3].quickstop", false)
+		vars.set_bool("ragebot.weapons[4].quickstop", false)
+		vars.set_bool("ragebot.weapons[5].quickstop", false)
+		vars.set_bool("ragebot.weapons[6].quickstop", false)
+		render.text([MenuPosition1[0]+995, MenuPosition1[1]+70], [80, 255, 80, MenuAlpha1*255], 12, 4, "Готов унижаться")
+	}else if (vars.get_int("js.Challenge") == 3)
+	{
+		vars.set_bool("ragebot.autoshoot", false)
+		render.text([MenuPosition1[0]+995, MenuPosition1[1]+70], [80, 255, 80, MenuAlpha1*255], 12, 4, "Готов унижаться")
+	}
+	else if (vars.get_int("js.Challenge") == 4)
+	{
+		render.text([MenuPosition1[0]+1015, MenuPosition1[1]+70], [80, 255, 255, MenuAlpha1*255], 12, 4, "Не забудь")
+	}
+	else if (vars.get_int("js.Challenge") == 5)
+	{
+		vars.set_uint("ragebot.weapons[0].hitscan", 1)
+		vars.set_uint("ragebot.weapons[1].hitscan", 1)
+		vars.set_uint("ragebot.weapons[2].hitscan", 1)
+		vars.set_uint("ragebot.weapons[3].hitscan", 1)
+		vars.set_uint("ragebot.weapons[4].hitscan", 1)
+		vars.set_uint("ragebot.weapons[5].hitscan", 1)
+		vars.set_uint("ragebot.weapons[6].hitscan", 1)
+		render.text([MenuPosition1[0]+995, MenuPosition1[1]+70], [80, 255, 80, MenuAlpha1*255], 12, 4, "Готов унижаться")
+	}
+	else if (vars.get_int("js.Challenge") == 6)
+	{
+		render.text([MenuPosition1[0]+1015, MenuPosition1[1]+70], [80, 255, 255, MenuAlpha1*255], 12, 4, "Не забудь")
+	}
+	else if (vars.get_int("js.Challenge") == 7)
+	{
+		render.text([MenuPosition1[0]+1015, MenuPosition1[1]+70], [80, 255, 255, MenuAlpha1*255], 12, 4, "Не забудь")
+	}
+	else if (vars.get_int("js.Challenge") == 8)
+	{
+		render.text([MenuPosition1[0]+995, MenuPosition1[1]+70], [30, 255, 30, MenuAlpha1*255], 12, 4, "Повезло, повезло")
+	}
+	else if (vars.get_int("js.Challenge") == 9)
+	{
+		vars.set_bool("antiaim.enable", false)
+		render.text([MenuPosition1[0]+995, MenuPosition1[1]+70], [80, 255, 80, MenuAlpha1*255], 12, 4, "Готов унижаться")
+	}
+	else if (vars.get_int("js.Challenge") == 10)
+	{
+		vars.set_bind_active("thirdperson",false);
+		render.text([MenuPosition1[0]+995, MenuPosition1[1]+70], [80, 255, 80, MenuAlpha1*255], 12, 4, "Готов унижаться")
+	}
+}
+
+register_callback("render", HelpersChallenge)
+
+
+
+
+
+ui.add_checkbox("Pymon","MenuPicter");
+
+vars.set_bool("js.MenuPicter",true);
+var iPymon = 0;
+
+var backpls = false;
+var PymonY = 0;
+var PumonX = -222;
+
+
+function MenuPic()
+{
+	
+	if (!vars.get_bool("js.MenuPicter")) return;
+	if(!ui.get_menu_alpha() > 0.1) return;
+	if (iPymon > 51) 
+	{
+		iPymon = 0
+	}
+
+	var MenuAlpha = ui.get_menu_alpha()
+  
+	var menu_position = ui.get_menu_position() // [x, y]
+	if (menu_position[0]<100){
+		PymonY = lerp(PymonY,-222,global_vars.frametime()*3);
+		PumonX = lerp(PumonX,+444,global_vars.frametime()*3);
+	}else{
+		PymonY = lerp(PymonY,0,global_vars.frametime()*3);
+		PumonX = lerp(PumonX,-222,global_vars.frametime()*3);
+	}
+	var time = global_vars.frame_count().toFixed(0)%5;
+	//cheat.log(menu_position[0]);
+	if (iPymon < 53) 
+	{ 
+		if (time == 0)
+		{		
+		++iPymon
+		}
+		
+		render.picture("C:/PasteCord/f8f7b4a0f93e44dacc0d18ba32482f92PC9Qn9kUN1yKThaN-"+iPymon+".png", [menu_position[0]+PumonX, menu_position[1]+PymonY], [397/2, 465/2], MenuAlpha*255);
+
+	}
+	
+}
+register_callback("render", MenuPic)
